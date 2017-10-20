@@ -1,0 +1,17 @@
+{
+  "name": "va_project",
+  "homepage": "https://github.com/victortangggg/va_is428",
+  "authors": [
+    "Team VEJ"
+  ],
+  "description": "SMU IS428 Visual Analytics for Business Intelligence Project",
+  "main": "index.html",
+  "license": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
