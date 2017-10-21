@@ -1,0 +1,32 @@
+﻿,KR: International Tourism: Expenditures
+Country,Korea
+Frequency,"Annual, ending ""Dec"" of each year"
+Unit,USD mn
+Source,World Bank
+Status,Active
+Series ID,274418402
+SR Code,SR5262994
+Function Information,
+First Obs. Date,1995
+Last Obs. Date,2015
+Last Update Time,18/04/2017
+Remarks,"International tourism expenditures are expenditures of international outbound visitors in other countries, including payments to foreign carriers for international transport. These expenditures may include those by residents traveling abroad as same-day visitors, except in cases where these are important enough to justify separate classification. For some countries they do not include expenditures for passenger transport items. Data are in current U.S. dollars.; ; World Tourism Organization, Yearbook of Tourism Statistics, Compendium of Tourism Statistics and data files.; Gap-filled total;"
+Mean,22922.666666666668
+Variance,10856844.250000002
+Standard Deviation,3294.9725719647504
+Skewness,-0.7040800732010682
+Kurtosis,1.0319397184841614
+Coefficient Variation,0.1437429867946465
+Min,16355
+Max,27559
+Median,22934
+No. of Obs,9
+2007,24431
+2008,21447
+2009,16355
+2010,20788
+2011,22195
+2012,22934
+2013,24459
+2014,26136
+2015,27559

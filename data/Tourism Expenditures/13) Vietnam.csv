@@ -1,0 +1,32 @@
+﻿,VN: International Tourism: Expenditures
+Country,Vietnam
+Frequency,"Annual, ending ""Dec"" of each year"
+Unit,USD mn
+Source,World Bank
+Status,Active
+Series ID,298192102
+SR Code,SR5320239
+Function Information,
+First Obs. Date,2005
+Last Obs. Date,2015
+Last Update Time,18/04/2017
+Remarks,"International tourism expenditures are expenditures of international outbound visitors in other countries, including payments to foreign carriers for international transport. These expenditures may include those by residents traveling abroad as same-day visitors, except in cases where these are important enough to justify separate classification. For some countries they do not include expenditures for passenger transport items. Data are in current U.S. dollars.; ; World Tourism Organization, Yearbook of Tourism Statistics, Compendium of Tourism Statistics and data files.; Gap-filled total;"
+Mean,1872.888888888889
+Variance,602965.1111111111
+Standard Deviation,776.5082814182416
+Skewness,1.2991754357333316
+Kurtosis,1.3580594974248763
+Coefficient Variation,0.4146045641174759
+Min,1100
+Max,3500
+Median,1710
+No. of Obs,9
+2007,1220
+2008,1300
+2009,1100
+2010,1470
+2011,1710
+2012,1856
+2013,2050
+2014,2650
+2015,3500

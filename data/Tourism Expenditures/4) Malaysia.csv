@@ -1,0 +1,32 @@
+﻿,MY: International Tourism: Expenditures
+Country,Malaysia
+Frequency,"Annual, ending ""Dec"" of each year"
+Unit,USD mn
+Source,World Bank
+Status,Active
+Series ID,274421902
+SR Code,SR5267194
+Function Information,
+First Obs. Date,1995
+Last Obs. Date,2015
+Last Update Time,18/04/2017
+Remarks,"International tourism expenditures are expenditures of international outbound visitors in other countries, including payments to foreign carriers for international transport. These expenditures may include those by residents traveling abroad as same-day visitors, except in cases where these are important enough to justify separate classification. For some countries they do not include expenditures for passenger transport items. Data are in current U.S. dollars.; ; World Tourism Organization, Yearbook of Tourism Statistics, Compendium of Tourism Statistics and data files.; Gap-filled total;"
+Mean,9723.111111111111
+Variance,5372378.861111111
+Standard Deviation,2317.8392655900693
+Skewness,-0.0659136607646455
+Kurtosis,-1.8844158887289728
+Coefficient Variation,0.23838452930372792
+Min,6600
+Max,12442
+Median,10180
+No. of Obs,9
+2007,6600
+2008,7724
+2009,7196
+2010,8324
+2011,10180
+2012,12217
+2013,12236
+2014,12442
+2015,10589

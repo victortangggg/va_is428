@@ -1,0 +1,32 @@
+﻿,JP: International Tourism: Expenditures
+Country,Japan
+Frequency,"Annual, ending ""Dec"" of each year"
+Unit,USD mn
+Source,World Bank
+Status,Active
+Series ID,274417802
+SR Code,SR5357695
+Function Information,
+First Obs. Date,1995
+Last Obs. Date,2015
+Last Update Time,18/04/2017
+Remarks,"International tourism expenditures are expenditures of international outbound visitors in other countries, including payments to foreign carriers for international transport. These expenditures may include those by residents traveling abroad as same-day visitors, except in cases where these are important enough to justify separate classification. For some countries they do not include expenditures for passenger transport items. Data are in current U.S. dollars.; ; World Tourism Organization, Yearbook of Tourism Statistics, Compendium of Tourism Statistics and data files.; Gap-filled total;"
+Mean,35007.444444444445
+Variance,35778030.277777776
+Standard Deviation,5981.473921850515
+Skewness,-1.105291522733532
+Kurtosis,0.4062857130535633
+Coefficient Variation,0.1708629126397072
+Min,23165
+Max,40967
+Median,37258
+No. of Obs,9
+2007,37258
+2008,38971
+2009,34787
+2010,39306
+2011,39760
+2012,40967
+2013,32244
+2014,28609
+2015,23165

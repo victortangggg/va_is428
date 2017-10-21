@@ -1,0 +1,44 @@
+﻿,ID: International Tourism: Expenditures
+Country,Indonesia
+Frequency,"Annual, ending ""Dec"" of each year"
+Unit,USD mn
+Source,World Bank
+Status,Active
+Series ID,274416802
+SR Code,SR5257219
+Function Information,
+First Obs. Date,1995
+Last Obs. Date,2015
+Last Update Time,18/04/2017
+Remarks,"International tourism expenditures are expenditures of international outbound visitors in other countries, including payments to foreign carriers for international transport. These expenditures may include those by residents traveling abroad as same-day visitors, except in cases where these are important enough to justify separate classification. For some countries they do not include expenditures for passenger transport items. Data are in current U.S. dollars.; ; World Tourism Organization, Yearbook of Tourism Statistics, Compendium of Tourism Statistics and data files.; Gap-filled total;"
+Mean,5764.0952380952385
+Variance,8597834.29047619
+Standard Deviation,2932.2063860642875
+Skewness,0.24356772301372287
+Kurtosis,-1.4684408174876094
+Coefficient Variation,0.50870193238397
+Min,2102
+Max,10280
+Median,5042
+No. of Obs,21
+1995,2172
+1996,2399
+1997,2411
+1998,2102
+1999,2353
+2000,3197
+2001,3406
+2002,5042
+2003,4427
+2004,4569
+2005,4740
+2006,5458
+2007,6578
+2008,8801
+2009,6908
+2010,8432
+2011,8653
+2012,9055
+2013,10280
+2014,10263
+2015,9800

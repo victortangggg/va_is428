@@ -1,0 +1,32 @@
+﻿,TH: International Tourism: Expenditures
+Country,Thailand
+Frequency,"Annual, ending ""Dec"" of each year"
+Unit,USD mn
+Source,World Bank
+Status,Active
+Series ID,274426702
+SR Code,SR5359713
+Function Information,
+First Obs. Date,1995
+Last Obs. Date,2015
+Last Update Time,18/04/2017
+Remarks,"International tourism expenditures are expenditures of international outbound visitors in other countries, including payments to foreign carriers for international transport. These expenditures may include those by residents traveling abroad as same-day visitors, except in cases where these are important enough to justify separate classification. For some countries they do not include expenditures for passenger transport items. Data are in current U.S. dollars.; ; World Tourism Organization, Yearbook of Tourism Statistics, Compendium of Tourism Statistics and data files.; Gap-filled total;"
+Mean,7636.111111111111
+Variance,1356039.611111111
+Standard Deviation,1164.4911382707517
+Skewness,0.07895829881902236
+Kurtosis,-0.31714581593150726
+Coefficient Variation,0.1524979300754713
+Min,5744
+Max,9539
+Median,7534
+No. of Obs,9
+2007,6889
+2008,6707
+2009,5744
+2010,7155
+2011,7534
+2012,8095
+2013,8238
+2014,8824
+2015,9539

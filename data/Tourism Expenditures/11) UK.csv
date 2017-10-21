@@ -1,0 +1,32 @@
+﻿,UK: International Tourism: Expenditures
+Country,United Kingdom
+Frequency,"Annual, ending ""Dec"" of each year"
+Unit,USD mn
+Source,World Bank
+Status,Active
+Series ID,274415002
+SR Code,SR5354115
+Function Information,
+First Obs. Date,1995
+Last Obs. Date,2015
+Last Update Time,18/04/2017
+Remarks,"International tourism expenditures are expenditures of international outbound visitors in other countries, including payments to foreign carriers for international transport. These expenditures may include those by residents traveling abroad as same-day visitors, except in cases where these are important enough to justify separate classification. For some countries they do not include expenditures for passenger transport items. Data are in current U.S. dollars.; ; World Tourism Organization, Yearbook of Tourism Statistics, Compendium of Tourism Statistics and data files.; Gap-filled total;"
+Mean,75380.77777777778
+Variance,81362902.19444445
+Standard Deviation,9020.138701508113
+Skewness,0.6443443346975114
+Kurtosis,-0.9228482981837156
+Coefficient Variation,0.11966099272813878
+Min,65435
+Max,89938
+Median,72379
+No. of Obs,9
+2007,89938
+2008,87949
+2009,65435
+2010,65875
+2011,69251
+2012,70569
+2013,72379
+2014,77429
+2015,79602

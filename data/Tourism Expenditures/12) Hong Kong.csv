@@ -1,0 +1,32 @@
+﻿,HK: International Tourism: Expenditures
+Country,Hong Kong
+Frequency,"Annual, ending ""Dec"" of each year"
+Unit,USD mn
+Source,World Bank
+Status,Active
+Series ID,274416202
+SR Code,SR5291784
+Function Information,
+First Obs. Date,1995
+Last Obs. Date,2015
+Last Update Time,18/04/2017
+Remarks,"International tourism expenditures are expenditures of international outbound visitors in other countries, including payments to foreign carriers for international transport. These expenditures may include those by residents traveling abroad as same-day visitors, except in cases where these are important enough to justify separate classification. For some countries they do not include expenditures for passenger transport items. Data are in current U.S. dollars.; ; World Tourism Organization, Yearbook of Tourism Statistics, Compendium of Tourism Statistics and data files.; Gap-filled total;"
+Mean,18825
+Variance,8757507.75
+Standard Deviation,2959.30866081928
+Skewness,0.06816409547903016
+Kurtosis,-1.6378710014709212
+Coefficient Variation,0.1572009912785806
+Min,15042
+Max,23059
+Median,19022
+No. of Obs,9
+2007,15042
+2008,16095
+2009,15547
+2010,17357
+2011,19022
+2012,20077
+2013,21215
+2014,22011
+2015,23059

@@ -1,0 +1,32 @@
+﻿,Resident Departure Expenditure: Total
+Country,Taiwan
+Frequency,"Annual, ending ""Dec"" of each year"
+Unit,USD mn
+Source,"Tourism Bureau, Ministry of Transportation and Communications"
+Status,Active
+Series ID,302427304 (WQXDC)
+SR Code,SR7031114
+Function Information,
+First Obs. Date,1997
+Last Obs. Date,2015
+Last Update Time,06/07/2016
+Remarks,
+Mean,15868.555555555555
+Variance,11115956.277777778
+Standard Deviation,3334.060029120318
+Skewness,0.23147122938462378
+Kurtosis,-1.1941462882628837
+Coefficient Variation,0.21010482128936236
+Min,11164
+Max,20918
+Median,15748
+No. of Obs,9
+2007,13142
+2008,13139
+2009,11164
+2010,13836
+2011,15748
+2012,16854
+2013,18118
+2014,19898
+2015,20918

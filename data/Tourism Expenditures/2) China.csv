@@ -1,0 +1,32 @@
+﻿,CN: International Tourism: Expenditures
+Country,China
+Frequency,"Annual, ending ""Dec"" of each year"
+Unit,USD mn
+Source,World Bank
+Status,Active
+Series ID,274412102
+SR Code,SR5335438
+Function Information,
+First Obs. Date,1995
+Last Obs. Date,2015
+Last Update Time,18/04/2017
+Remarks,"International tourism expenditures are expenditures of international outbound visitors in other countries, including payments to foreign carriers for international transport. These expenditures may include those by residents traveling abroad as same-day visitors, except in cases where these are important enough to justify separate classification. For some countries they do not include expenditures for passenger transport items. Data are in current U.S. dollars.; ; World Tourism Organization, Yearbook of Tourism Statistics, Compendium of Tourism Statistics and data files.; Gap-filled total;"
+Mean,110502.77777777778
+Variance,8733151419.194443
+Standard Deviation,93451.33182140553
+Skewness,1.2713945282443582
+Kurtosis,0.4585954495194011
+Coefficient Variation,0.8456921509189309
+Min,29786
+Max,292200
+Median,72585
+No. of Obs,9
+2007,29786
+2008,36157
+2009,43702
+2010,54880
+2011,72585
+2012,101977
+2013,128576
+2014,234662
+2015,292200

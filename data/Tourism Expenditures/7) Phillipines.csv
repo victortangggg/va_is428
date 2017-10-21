@@ -1,0 +1,32 @@
+﻿,PH: International Tourism: Expenditures
+Country,Philippines
+Frequency,"Annual, ending ""Dec"" of each year"
+Unit,USD mn
+Source,World Bank
+Status,Active
+Series ID,274423502
+SR Code,SR5317497
+Function Information,
+First Obs. Date,1995
+Last Obs. Date,2015
+Last Update Time,18/04/2017
+Remarks,"International tourism expenditures are expenditures of international outbound visitors in other countries, including payments to foreign carriers for international transport. These expenditures may include those by residents traveling abroad as same-day visitors, except in cases where these are important enough to justify separate classification. For some countries they do not include expenditures for passenger transport items. Data are in current U.S. dollars.; ; World Tourism Organization, Yearbook of Tourism Statistics, Compendium of Tourism Statistics and data files.; Gap-filled total;"
+Mean,6952.444444444444
+Variance,9660313.777777778
+Standard Deviation,3108.104531346682
+Skewness,0.6852742803473281
+Kurtosis,-0.688270941684717
+Coefficient Variation,0.447052048553988
+Min,3351
+Max,12191
+Median,6055
+No. of Obs,9
+2007,3351
+2008,4285
+2009,4056
+2010,5964
+2011,6055
+2012,7140
+2013,8400
+2014,11130
+2015,12191
