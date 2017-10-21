@@ -1,0 +1,32 @@
+﻿,UK: International Tourism: Number of Departures
+Country,United Kingdom
+Frequency,"Annual, ending ""Dec"" of each year"
+Unit,Person
+Source,World Bank
+Status,Active
+Series ID,274287602
+SR Code,SR5354470
+Function Information,
+First Obs. Date,1995
+Last Obs. Date,2015
+Last Update Time,18/04/2017
+Remarks,"International outbound tourists are the number of departures that people make from their country of usual residence to any other country for any purpose other than a remunerated activity in the country visited. The data on outbound tourists refer to the number of departures, not to the number of people traveling. Thus a person who makes several trips from a country during a given period is counted each time as a new departure.; ; World Tourism Organization, Yearbook of Tourism Statistics, Compendium of Tourism Statistics and data files.; Gap-filled total;"
+Mean,61067222.222222224
+Variance,30182939944444.445
+Standard Deviation,5493900.248861863
+Skewness,0.7799168333894306
+Kurtosis,-1.2781317156154004
+Coefficient Variation,0.08996479697192851
+Min,55562000
+Max,69450000
+Median,58614000
+No. of Obs,9
+2007,69450000
+2008,69011000
+2009,58614000
+2010,55562000
+2011,56836000
+2012,56538000
+2013,57792000
+2014,60082000
+2015,65720000

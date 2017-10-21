@@ -1,0 +1,32 @@
+﻿,AU: International Tourism: Number of Departures,JP: International Tourism: Number of Departures
+Country,Australia,Japan
+Frequency,"Annual, ending ""Dec"" of each year","Annual, ending ""Dec"" of each year"
+Unit,Person,Person
+Source,World Bank,World Bank
+Status,Active,Active
+Series ID,274284002,274289202
+SR Code,SR5347495,SR5356105
+Function Information,,
+First Obs. Date,1995,1995
+Last Obs. Date,2015,2015
+Last Update Time,18/04/2017,18/04/2017
+Remarks,"International outbound tourists are the number of departures that people make from their country of usual residence to any other country for any purpose other than a remunerated activity in the country visited. The data on outbound tourists refer to the number of departures, not to the number of people traveling. Thus a person who makes several trips from a country during a given period is counted each time as a new departure.; ; World Tourism Organization, Yearbook of Tourism Statistics, Compendium of Tourism Statistics and data files.; Gap-filled total;","International outbound tourists are the number of departures that people make from their country of usual residence to any other country for any purpose other than a remunerated activity in the country visited. The data on outbound tourists refer to the number of departures, not to the number of people traveling. Thus a person who makes several trips from a country during a given period is counted each time as a new departure.; ; World Tourism Organization, Yearbook of Tourism Statistics, Compendium of Tourism Statistics and data files.; Gap-filled total;"
+Mean,7554444.444444444,16826666.666666668
+Variance,2160725527777.7776,807941250000.0001
+Standard Deviation,1469940.6545088063,898855.5223171298
+Skewness,-0.19652183705807535,0.3380148339919794
+Kurtosis,-1.5526280604951674,0.4221578429549915
+Coefficient Variation,0.19457958362375727,0.053418513608387265
+Min,5462000,15446000
+Max,9459000,18491000
+Median,7788000,16903000
+No. of Obs,9,9
+2007,5462000,17295000
+2008,5808000,15987000
+2009,6276000,15446000
+2010,7103000,16637000
+2011,7788000,16994000
+2012,8212000,18491000
+2013,8768000,17473000
+2014,9114000,16903000
+2015,9459000,16214000

@@ -1,0 +1,32 @@
+﻿,HK: International Tourism: Number of Departures
+Country,Hong Kong
+Frequency,"Annual, ending ""Dec"" of each year"
+Unit,Person
+Source,World Bank
+Status,Active
+Series ID,274288102
+SR Code,SR5291149
+Function Information,
+First Obs. Date,1998
+Last Obs. Date,2016
+Last Update Time,18/04/2017
+Remarks,"International outbound tourists are the number of departures that people make from their country of usual residence to any other country for any purpose other than a remunerated activity in the country visited. The data on outbound tourists refer to the number of departures, not to the number of people traveling. Thus a person who makes several trips from a country during a given period is counted each time as a new departure.; ; World Tourism Organization, Yearbook of Tourism Statistics, Compendium of Tourism Statistics and data files.; Gap-filled total;"
+Mean,85352888.8888889
+Variance,10125543861111.113
+Standard Deviation,3182065.9737207075
+Skewness,1.1592643609423618
+Kurtosis,1.049961581314232
+Coefficient Variation,0.03728129200012284
+Min,81911000
+Max,91758000
+Median,84519000
+No. of Obs,9
+2008,81911000
+2009,81958000
+2010,84442000
+2011,84816000
+2012,85276000
+2013,84414000
+2014,84519000
+2015,89082000
+2016,91758000

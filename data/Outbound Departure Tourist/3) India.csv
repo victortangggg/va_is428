@@ -1,0 +1,32 @@
+﻿,IN: International Tourism: Number of Departures
+Country,India
+Frequency,"Annual, ending ""Dec"" of each year"
+Unit,Person
+Source,World Bank
+Status,Active
+Series ID,274288502
+SR Code,SR5364166
+Function Information,
+First Obs. Date,1995
+Last Obs. Date,2015
+Last Update Time,18/04/2017
+Remarks,"International outbound tourists are the number of departures that people make from their country of usual residence to any other country for any purpose other than a remunerated activity in the country visited. The data on outbound tourists refer to the number of departures, not to the number of people traveling. Thus a person who makes several trips from a country during a given period is counted each time as a new departure.; ; World Tourism Organization, Yearbook of Tourism Statistics, Compendium of Tourism Statistics and data files.; Gap-filled total;"
+Mean,14328000
+Variance,12924434750000
+Standard Deviation,3595056.9884217414
+Skewness,0.4331753331211837
+Kurtosis,-0.8690965988932482
+Coefficient Variation,0.25091129176589483
+Min,9783000
+Max,20376000
+Median,13994000
+No. of Obs,9
+2007,9783000
+2008,10868000
+2009,11067000
+2010,12988000
+2011,13994000
+2012,14920000
+2013,16626000
+2014,18330000
+2015,20376000

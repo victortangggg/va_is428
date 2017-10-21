@@ -1,0 +1,32 @@
+﻿,PH: International Tourism: Number of Departures
+Country,Philippines
+Frequency,"Annual, ending ""Dec"" of each year"
+Unit,Person
+Source,World Bank
+Status,Active
+Series ID,274292802
+SR Code,SR5319666
+Function Information,
+First Obs. Date,1995
+Last Obs. Date,2009
+Last Update Time,18/10/2015
+Remarks,"International outbound tourists are the number of departures that people make from their country of usual residence to any other country for any purpose other than a remunerated activity in the country visited. The data on outbound tourists refer to the number of departures, not to the number of people traveling. Thus a person who makes several trips from a country during a given period is counted each time as a new departure.; ; World Tourism Organization, Yearbook of Tourism Statistics, Compendium of Tourism Statistics and data files.; Gap-filled total;"
+Mean,2441888.888888889
+Variance,411704111111.1111
+Standard Deviation,641641.7311172264
+Skewness,0.3842808259960192
+Kurtosis,-1.9673758760954554
+Coefficient Variation,0.2627645074421003
+Min,1787000
+Max,3355000
+Median,2144000
+No. of Obs,9
+2001,1787000
+2002,1969000
+2003,1803000
+2004,1920000
+2005,2144000
+2006,2745000
+2007,3066000
+2008,3355000
+2009,3188000

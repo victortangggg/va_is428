@@ -1,0 +1,33 @@
+﻿,VN: International Tourism: Number of Arrivals,VN: International Tourism: Receipts,VN: International Tourism: Receipts: % of Total Exports,VN: International Tourism: Expenditures,VN: International Tourism: Expenditures: % of Total Imports
+Country,Vietnam,Vietnam,Vietnam,Vietnam,Vietnam
+Frequency,"Annual, ending ""Dec"" of each year","Annual, ending ""Dec"" of each year","Annual, ending ""Dec"" of each year","Annual, ending ""Dec"" of each year","Annual, ending ""Dec"" of each year"
+Unit,Person,USD mn,%,USD mn,%
+Source,World Bank,World Bank,World Bank,World Bank,World Bank
+Status,Active,Active,Active,Active,Active
+Series ID,274282402,274317202,274336602,298192102,298193102
+SR Code,SR5319683,SR5316483,SR5319688,SR5320239,SR5320322
+Function Information,,,,,
+First Obs. Date,1995,2003,2003,2005,2005
+Last Obs. Date,2016,2015,2015,2015,2015
+Last Update Time,18/04/2017,18/04/2017,18/04/2017,18/04/2017,18/04/2017
+Remarks,"International inbound tourists (overnight visitors) are the number of tourists who travel to a country other than that in which they have their usual residence, but outside their usual environment, for a period not exceeding 12 months and whose main purpose in visiting is other than an activity remunerated from within the country visited. When data on number of tourists are not available, the number of visitors, which includes tourists, same-day visitors, cruise passengers, and crew members, is shown instead. Sources and collection methods for arrivals differ across countries. In some cases data are from border statistics (police, immigration, and the like) and supplemented by border surveys. In other cases data are from tourism accommodation establishments. For some countries number of arrivals is limited to arrivals by air and for others to arrivals staying in hotels. Some countries include arrivals of nationals residing abroad while others do not. Caution should thus be used in comparing arrivals across countries. The data on inbound tourists refer to the number of arrivals, not to the number of people traveling. Thus a person who makes several trips to a country during a given period is counted each time as a new arrival.; ; World Tourism Organization, Yearbook of Tourism Statistics, Compendium of Tourism Statistics and data files.; Gap-filled total;","International tourism receipts are expenditures by international inbound visitors, including payments to national carriers for international transport. These receipts include any other prepayment made for goods or services received in the destination country. They also may include receipts from same-day visitors, except when these are important enough to justify separate classification. For some countries they do not include receipts for passenger transport items. Data are in current U.S. dollars.; ; World Tourism Organization, Yearbook of Tourism Statistics, Compendium of Tourism Statistics and data files.; Gap-filled total;","International tourism receipts are expenditures by international inbound visitors, including payments to national carriers for international transport. These receipts include any other prepayment made for goods or services received in the destination country. They also may include receipts from same-day visitors, except when these are important enough to justify separate classification. For some countries they do not include receipts for passenger transport items. Their share in exports is calculated as a ratio to exports of goods and services, which comprise all transactions between residents of a country and the rest of the world involving a change of ownership from residents to nonresidents of general merchandise, goods sent for processing and repairs, nonmonetary gold, and services.; ; World Tourism Organization, Yearbook of Tourism Statistics, Compendium of Tourism Statistics and data files, and IMF and World Bank exports estimates.; Weighted average;","International tourism expenditures are expenditures of international outbound visitors in other countries, including payments to foreign carriers for international transport. These expenditures may include those by residents traveling abroad as same-day visitors, except in cases where these are important enough to justify separate classification. For some countries they do not include expenditures for passenger transport items. Data are in current U.S. dollars.; ; World Tourism Organization, Yearbook of Tourism Statistics, Compendium of Tourism Statistics and data files.; Gap-filled total;","International tourism expenditures are expenditures of international outbound visitors in other countries, including payments to foreign carriers for international transport. These expenditures may include those by residents traveling abroad as same-day visitors, except in cases where these are important enough to justify separate classification. For some countries they do not include expenditures for passenger transport items. Their share in imports is calculated as a ratio to imports of goods and services, which comprise all transactions between residents of a country and the rest of the world involving a change of ownership from nonresidents to residents of general merchandise, goods sent for processing and repairs, nonmonetary gold, and services.; ; World Tourism Organization, Yearbook of Tourism Statistics, Compendium of Tourism Statistics and data files, and IMF and World Bank imports estimates.; Weighted average;"
+Mean,6588666.666666667,5527.777777777777,5.307675474444444,1872.888888888889,1.671943628888889
+Variance,4069639249999.9995,3078144.444444444,0.5720759215820057,602965.1111111111,0.03430545985286281
+Standard Deviation,2017334.6896338246,1754.4641473807449,0.7563570066985601,776.5082814182416,0.18521733140519764
+Skewness,0.1161631746855765,-0.17905505196627608,0.815355946955967,1.2991754357333316,1.2640779038404493
+Kurtosis,-0.5912271438479988,-1.9994507808594566,1.6177391468288098,1.3580594974248763,1.1103446406369804
+Coefficient Variation,0.30618253915316573,0.31739049902365235,0.14250249668433773,0.4146045641174759,0.11077965082368604
+Min,3747000,3050,4.24090657,1100,1.49483371
+Max,10013000,7410,6.86926416,3500,2.05621093
+Median,6848000,5710,5.3977407,1710,1.58811651
+No. of Obs,9,9,9,9,9
+2007,,3750,6.86926416,1220,1.85455148
+2008,4236000,3930,5.63917866,1300,1.55830456
+2009,3747000,3050,4.85189781,1100,1.50912334
+2010,5050000,4450,5.58364807,1470,1.68396453
+2011,6014000,5710,5.3977407,1710,1.56571899
+2012,6848000,6850,5.5102402,1856,1.58811651
+2013,7572000,7250,5.07905817,2050,1.49483371
+2014,7874000,7410,4.59714493,2650,1.73666861
+2015,7944000,7350,4.24090657,3500,2.05621093
+2016,10013000,,,,

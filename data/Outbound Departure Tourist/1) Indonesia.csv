@@ -1,0 +1,32 @@
+﻿,Residents Departures: Number of Person
+Country,Indonesia
+Frequency,"Annual, ending ""Dec"" of each year"
+Unit,Person
+Source,Ministry of Tourism
+Status,Active
+Series ID,296152704 (DQKMVJ)
+SR Code,SR6876322
+Function Information,
+First Obs. Date,2005
+Last Obs. Date,2016
+Last Update Time,06/03/2017
+Remarks,
+Mean,6777768.444444444
+Variance,1374894648971.5278
+Standard Deviation,1172559.0172658807
+Skewness,-0.581768888135417
+Kurtosis,-1.0517665119878847
+Coefficient Variation,0.17300074897468593
+Min,4996594
+Max,8024876
+Median,6750416
+No. of Obs,9
+2008,4996594
+2009,5053269
+2010,6235606
+2011,6750416
+2012,7453633
+2013,8024876
+2014,7899070
+2015,7908534
+2016,6677918

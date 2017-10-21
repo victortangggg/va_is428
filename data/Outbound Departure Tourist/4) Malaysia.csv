@@ -1,0 +1,32 @@
+﻿,MY: (DC)International Tourism: Number of Departures
+Country,Malaysia
+Frequency,"Annual, ending ""Dec"" of each year"
+Unit,Person
+Source,World Bank
+Status,Discontinued
+Series ID,274291602
+SR Code,SR5267777
+Function Information,
+First Obs. Date,1995
+Last Obs. Date,2004
+Last Update Time,18/10/2015
+Remarks,"International outbound tourists are the number of departures that people make from their country of usual residence to any other country for any purpose other than a remunerated activity in the country visited. The data on outbound tourists refer to the number of departures, not to the number of people traveling. Thus a person who makes several trips from a country during a given period is counted each time as a new departure.; ; World Tourism Organization, Yearbook of Tourism Statistics, Compendium of Tourism Statistics and data files.; Gap-filled total;"
+Mean,28978222.222222224
+Variance,16134812694444.445
+Standard Deviation,4016816.238570598
+Skewness,0.40531718020280866
+Kurtosis,-0.2571170031563188
+Coefficient Variation,0.1386149988003841
+Min,23333000
+Max,36248000
+Median,29866000
+No. of Obs,9
+1996,23333000
+1997,26165000
+1998,25631000
+1999,26067000
+2000,30532000
+2001,36248000
+2002,29866000
+2003,32201000
+2004,30761000

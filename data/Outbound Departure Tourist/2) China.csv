@@ -1,0 +1,32 @@
+﻿,CN: International Tourism: Number of Departures
+Country,China
+Frequency,"Annual, ending ""Dec"" of each year"
+Unit,Person
+Source,World Bank
+Status,Active
+Series ID,274285502
+SR Code,SR5332690
+Function Information,
+First Obs. Date,1995
+Last Obs. Date,2015
+Last Update Time,18/04/2017
+Remarks,"International outbound tourists are the number of departures that people make from their country of usual residence to any other country for any purpose other than a remunerated activity in the country visited. The data on outbound tourists refer to the number of departures, not to the number of people traveling. Thus a person who makes several trips from a country during a given period is counted each time as a new departure.; ; World Tourism Organization, Yearbook of Tourism Statistics, Compendium of Tourism Statistics and data files.; Gap-filled total;"
+Mean,74180000
+Variance,810542946250000
+Standard Deviation,28470035.936928496
+Skewness,0.319054799039752
+Kurtosis,-1.5939950553573632
+Coefficient Variation,0.383796655930554
+Min,40954000
+Max,116886000
+Median,70250000
+No. of Obs,9
+2007,40954000
+2008,45844000
+2009,47656000
+2010,57386000
+2011,70250000
+2012,83183000
+2013,98185000
+2014,107276000
+2015,116886000

@@ -1,0 +1,32 @@
+﻿,US: International Tourism: Number of Departures
+Country,United States
+Frequency,"Annual, ending ""Dec"" of each year"
+Unit,Person
+Source,World Bank
+Status,Active
+Series ID,274296202
+SR Code,SR5371584
+Function Information,
+First Obs. Date,1995
+Last Obs. Date,2015
+Last Update Time,18/04/2017
+Remarks,"International outbound tourists are the number of departures that people make from their country of usual residence to any other country for any purpose other than a remunerated activity in the country visited. The data on outbound tourists refer to the number of departures, not to the number of people traveling. Thus a person who makes several trips from a country during a given period is counted each time as a new departure.; ; World Tourism Organization, Yearbook of Tourism Statistics, Compendium of Tourism Statistics and data files.; Gap-filled total;"
+Mean,63802555.55555555
+Variance,19673728027777.777
+Standard Deviation,4435507.640369677
+Skewness,1.5146104757588306
+Kurtosis,2.111748013786256
+Coefficient Variation,0.06951927868324169
+Min,59209000
+Max,73453000
+Median,62051000
+No. of Obs,9
+2007,64049000
+2008,63653000
+2009,62051000
+2010,61061000
+2011,59209000
+2012,60697000
+2013,61874000
+2014,68176000
+2015,73453000

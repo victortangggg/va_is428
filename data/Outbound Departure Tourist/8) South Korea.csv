@@ -1,0 +1,32 @@
+﻿,KR: International Tourism: Number of Departures
+Country,Korea
+Frequency,"Annual, ending ""Dec"" of each year"
+Unit,Person
+Source,World Bank
+Status,Active
+Series ID,274289602
+SR Code,SR5264742
+Function Information,
+First Obs. Date,1995
+Last Obs. Date,2016
+Last Update Time,18/04/2017
+Remarks,"International outbound tourists are the number of departures that people make from their country of usual residence to any other country for any purpose other than a remunerated activity in the country visited. The data on outbound tourists refer to the number of departures, not to the number of people traveling. Thus a person who makes several trips from a country during a given period is counted each time as a new departure.; ; World Tourism Organization, Yearbook of Tourism Statistics, Compendium of Tourism Statistics and data files.; Gap-filled total;"
+Mean,14781000
+Variance,15801052250000
+Standard Deviation,3975053.7417750717
+Skewness,0.8770031056042112
+Kurtosis,0.4200456810757318
+Coefficient Variation,0.2689299602039829
+Min,9494000
+Max,22383000
+Median,13737000
+No. of Obs,9
+2008,11996000
+2009,9494000
+2010,12488000
+2011,12694000
+2012,13737000
+2013,14846000
+2014,16081000
+2015,19310000
+2016,22383000
