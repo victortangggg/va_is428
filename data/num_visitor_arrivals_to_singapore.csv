@@ -1,4 +1,4 @@
-Country,Year,Visitor Arrival
+Country,Year,VisitorArrival
 Australia,2010,840126
 Australia,2011,914334
 Australia,2012,1003032
@@ -26,7 +26,7 @@ Hong Kong,2012,409240
 Hong Kong,2013,422407
 Hong Kong,2015,493564
 Hong Kong,2016,443372
-Hong Kong SAR,2014,497059
+Hong Kong,2014,497059
 India,2010,685772
 India,2011,727910
 India,2012,772281
