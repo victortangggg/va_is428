@@ -1,0 +1,32 @@
+﻿,Tourist Expenditure Per Capita: Taiwan
+Country,Singapore
+Frequency,"Annual, ending ""Dec"" of each year"
+Unit,SGD
+Source,Singapore Tourism Board
+Status,Active
+Series ID,36572201 (SQCBEL)
+SR Code,SR87381
+Function Information,
+First Obs. Date,1995
+Last Obs. Date,2015
+Last Update Time,07/10/2016
+Remarks,
+Mean,894.5555555555555
+Variance,19840.027777777774
+Standard Deviation,140.85463349772266
+Skewness,0.23080376204103112
+Kurtosis,-1.236142790111733
+Coefficient Variation,0.1574576700384429
+Min,692
+Max,1100
+Median,865
+No. of Obs,9
+2007,692
+2008,856
+2009,1037
+2010,1100
+2011,1054
+2012,892
+2013,778
+2014,865
+2015,777

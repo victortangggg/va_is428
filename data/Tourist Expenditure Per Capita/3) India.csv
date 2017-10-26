@@ -1,0 +1,32 @@
+﻿,Tourist Expenditure Per Capita: India
+Country,Singapore
+Frequency,"Annual, ending ""Dec"" of each year"
+Unit,SGD
+Source,Singapore Tourism Board
+Status,Active
+Series ID,36571901 (SQCBEI)
+SR Code,SR87378
+Function Information,
+First Obs. Date,1995
+Last Obs. Date,2015
+Last Update Time,07/10/2016
+Remarks,
+Mean,1207.7777777777778
+Variance,7192.694444444443
+Standard Deviation,84.80975441801753
+Skewness,-0.8391459993428673
+Kurtosis,-0.5387700929192958
+Coefficient Variation,0.07021966787140366
+Min,1059
+Max,1311
+Median,1240
+No. of Obs,9
+2007,1251
+2008,1234
+2009,1059
+2010,1099
+2011,1270
+2012,1255
+2013,1311
+2014,1240
+2015,1151

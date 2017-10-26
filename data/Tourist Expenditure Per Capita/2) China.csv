@@ -1,0 +1,32 @@
+﻿,Tourist Expenditure Per Capita: China
+Country,Singapore
+Frequency,"Annual, ending ""Dec"" of each year"
+Unit,SGD
+Source,Singapore Tourism Board
+Status,Active
+Series ID,36571701 (SQCBEG)
+SR Code,SR87376
+Function Information,
+First Obs. Date,1995
+Last Obs. Date,2015
+Last Update Time,07/10/2016
+Remarks,
+Mean,1252.888888888889
+Variance,49129.36111111111
+Standard Deviation,221.65144057982369
+Skewness,-0.9002056280057278
+Kurtosis,0.18160961014383048
+Coefficient Variation,0.17691228850819557
+Min,838
+Max,1529
+Median,1313
+No. of Obs,9
+2007,838
+2008,978
+2009,1435
+2010,1403
+2011,1338
+2012,1237
+2013,1313
+2014,1529
+2015,1205

@@ -1,0 +1,32 @@
+﻿,Tourist Expenditure Per Capita: Philippines
+Country,Singapore
+Frequency,"Annual, ending ""Dec"" of each year"
+Unit,SGD
+Source,Singapore Tourism Board
+Status,Active
+Series ID,36571501 (SQCBEE)
+SR Code,SR87374
+Function Information,
+First Obs. Date,1998
+Last Obs. Date,2015
+Last Update Time,07/10/2016
+Remarks,
+Mean,1173.6666666666667
+Variance,38952.5
+Standard Deviation,197.36387714067638
+Skewness,1.1120998695817474
+Kurtosis,1.8678442677108729
+Coefficient Variation,0.1681600770866314
+Min,945
+Max,1595
+Median,1167
+No. of Obs,9
+2007,1186
+2008,1595
+2009,1288
+2010,1153
+2011,1239
+2012,1167
+2013,994
+2014,996
+2015,945

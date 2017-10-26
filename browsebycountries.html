@@ -69,9 +69,10 @@
                 .attr("class", "tooltip")
                 .style("opacity", 0);
 
+    var dispatch = d3.dispatch("load", "statechange");
+
     //Bring in the data from the file
     //Use console.log(data) to see how it is imported
-
     d3.csv("data/num_visitor_arrivals_to_singapore.csv", function(error,data){
 
 //for dropdown list

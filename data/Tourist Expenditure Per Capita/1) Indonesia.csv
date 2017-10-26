@@ -1,0 +1,32 @@
+﻿,Tourist Expenditure Per Capita: Indonesia
+Country,Singapore
+Frequency,"Annual, ending ""Dec"" of each year"
+Unit,SGD
+Source,Singapore Tourism Board
+Status,Active
+Series ID,36571301 (SQCBEC)
+SR Code,SR87372
+Function Information,
+First Obs. Date,1998
+Last Obs. Date,2015
+Last Update Time,07/10/2016
+Remarks,
+Mean,1047.5555555555557
+Variance,13400.527777777777
+Standard Deviation,115.7606486582456
+Skewness,-0.38561225307734226
+Kurtosis,-0.896874031279443
+Coefficient Variation,0.11050549829488866
+Min,850
+Max,1207
+Median,1101
+No. of Obs,9
+2007,954
+2008,1141
+2009,1207
+2010,1129
+2011,1101
+2012,1107
+2013,964
+2014,975
+2015,850

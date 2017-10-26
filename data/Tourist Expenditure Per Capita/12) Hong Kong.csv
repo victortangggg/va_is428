@@ -1,0 +1,32 @@
+﻿,Tourist Expenditure Per Capita: Hong Kong
+Country,Singapore
+Frequency,"Annual, ending ""Dec"" of each year"
+Unit,SGD
+Source,Singapore Tourism Board
+Status,Active
+Series ID,36571801 (SQCBEH)
+SR Code,SR87377
+Function Information,
+First Obs. Date,1995
+Last Obs. Date,2015
+Last Update Time,07/10/2016
+Remarks,
+Mean,1025
+Variance,21101.5
+Standard Deviation,145.26355358451067
+Skewness,0.670012213837703
+Kurtosis,-0.5373325602298689
+Coefficient Variation,0.14172054008244944
+Min,875
+Max,1290
+Median,1022
+No. of Obs,9
+2007,896
+2008,1022
+2009,1145
+2010,1290
+2011,1149
+2012,1033
+2013,939
+2014,876
+2015,875

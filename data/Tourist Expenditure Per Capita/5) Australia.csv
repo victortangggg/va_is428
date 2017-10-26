@@ -1,0 +1,32 @@
+﻿,Tourist Expenditure: Australia,Tourist Expenditure Per Capita: Australia
+Country,Singapore,Singapore
+Frequency,"Annual, ending ""Dec"" of each year","Annual, ending ""Dec"" of each year"
+Unit,SGD mn,SGD
+Source,Singapore Tourism Board,Singapore Tourism Board
+Status,Active,Active
+Series ID,36570701 (SQCBDO),36572901 (SQCBES)
+SR Code,SR87365,SR87388
+Function Information,,
+First Obs. Date,1990,1995
+Last Obs. Date,2015,2015
+Last Update Time,07/10/2016,07/10/2016
+Remarks,,
+Mean,938.1222222222223,981.2222222222222
+Variance,39631.26444444444,21000.694444444445
+Standard Deviation,199.07602679490174,144.91616350305594
+Skewness,-1.302153827594207,-0.7125883394871052
+Kurtosis,0.15146133013847507,-0.4888584852762783
+Coefficient Variation,0.21220691939620703,0.14768944304467257
+Min,580.2,755
+Max,1096,1146
+Median,1023,988
+No. of Obs,9,9
+2007,580.2,755
+2008,625.9,755
+2009,905,1090
+2010,1002,1138
+2011,1095,1146
+2012,1038,988
+2013,1078,958
+2014,1096,1020
+2015,1023,981

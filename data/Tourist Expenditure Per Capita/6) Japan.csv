@@ -1,0 +1,32 @@
+﻿,Tourist Expenditure Per Capita: Japan
+Country,Singapore
+Frequency,"Annual, ending ""Dec"" of each year"
+Unit,SGD
+Source,Singapore Tourism Board
+Status,Active
+Series ID,36572001 (SQCBEJ)
+SR Code,SR87379
+Function Information,
+First Obs. Date,1995
+Last Obs. Date,2015
+Last Update Time,07/10/2016
+Remarks,
+Mean,1077.2222222222222
+Variance,23306.444444444445
+Standard Deviation,152.66448324493962
+Skewness,-0.9626979044118783
+Kurtosis,-0.06156234903053903
+Coefficient Variation,0.14172051049040296
+Min,807
+Max,1254
+Median,1094
+No. of Obs,9
+2007,807
+2008,856
+2009,1064
+2010,1152
+2011,1212
+2012,1254
+2013,1094
+2014,1084
+2015,1172

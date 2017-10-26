@@ -1,0 +1,32 @@
+﻿,Tourist Expenditure Per Capita: Korea
+Country,Singapore
+Frequency,"Annual, ending ""Dec"" of each year"
+Unit,SGD
+Source,Singapore Tourism Board
+Status,Active
+Series ID,36572101 (SQCBEK)
+SR Code,SR87380
+Function Information,
+First Obs. Date,1995
+Last Obs. Date,2015
+Last Update Time,07/10/2016
+Remarks,
+Mean,965
+Variance,39513.75
+Standard Deviation,198.7806580127956
+Skewness,-1.1642900031767758
+Kurtosis,0.22120401935935963
+Coefficient Variation,0.20599031918424415
+Min,614
+Max,1194
+Median,1026
+No. of Obs,9
+2007,614
+2008,653
+2009,1194
+2010,1073
+2011,1070
+2012,1026
+2013,986
+2014,1092
+2015,977

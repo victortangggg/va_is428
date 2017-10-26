@@ -1,0 +1,32 @@
+﻿,Tourist Expenditure Per Capita: United Kingdom
+Country,Singapore
+Frequency,"Annual, ending ""Dec"" of each year"
+Unit,SGD
+Source,Singapore Tourism Board
+Status,Active
+Series ID,36572801 (SQCBER)
+SR Code,SR87387
+Function Information,
+First Obs. Date,1995
+Last Obs. Date,2015
+Last Update Time,07/10/2016
+Remarks,
+Mean,1085.7777777777778
+Variance,11549.194444444445
+Standard Deviation,107.46717845204854
+Skewness,-1.0287439598649175
+Kurtosis,0.09401998801083078
+Coefficient Variation,0.09897713938481753
+Min,897
+Max,1215
+Median,1115
+No. of Obs,9
+2007,897
+2008,923
+2009,1104
+2010,1174
+2011,1215
+2012,1078
+2013,1115
+2014,1139
+2015,1127

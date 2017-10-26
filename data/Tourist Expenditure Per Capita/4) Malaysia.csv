@@ -1,0 +1,32 @@
+﻿,Tourist Expenditure Per Capita: Malaysia
+Country,Singapore
+Frequency,"Annual, ending ""Dec"" of each year"
+Unit,SGD
+Source,Singapore Tourism Board
+Status,Active
+Series ID,36571401 (SQCBED)
+SR Code,SR87373
+Function Information,
+First Obs. Date,1998
+Last Obs. Date,2015
+Last Update Time,07/10/2016
+Remarks,
+Mean,712.5555555555555
+Variance,9068.527777777776
+Standard Deviation,95.22881800052848
+Skewness,-0.07633431416894522
+Kurtosis,0.46485124430124003
+Coefficient Variation,0.13364406081471328
+Min,544
+Max,873
+Median,694
+No. of Obs,9
+2007,664
+2008,644
+2009,873
+2010,739
+2011,783
+2012,782
+2013,694
+2014,690
+2015,544

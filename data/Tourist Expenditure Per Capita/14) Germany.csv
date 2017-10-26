@@ -1,0 +1,32 @@
+﻿,Tourist Expenditure Per Capita: Germany
+Country,Singapore
+Frequency,"Annual, ending ""Dec"" of each year"
+Unit,SGD
+Source,Singapore Tourism Board
+Status,Active
+Series ID,36572401 (SQCBEN)
+SR Code,SR87383
+Function Information,
+First Obs. Date,1995
+Last Obs. Date,2015
+Last Update Time,07/10/2016
+Remarks,
+Mean,913.3333333333334
+Variance,6110.75
+Standard Deviation,78.17128628850878
+Skewness,0.5371174950403046
+Kurtosis,-1.7277040750156152
+Coefficient Variation,0.08558899958595852
+Min,829
+Max,1018
+Median,873
+No. of Obs,9
+2007,829
+2008,868
+2009,1009
+2010,1018
+2011,1011
+2012,867
+2013,873
+2014,834
+2015,911

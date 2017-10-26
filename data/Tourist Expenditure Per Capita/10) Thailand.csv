@@ -1,0 +1,32 @@
+﻿,Tourist Expenditure Per Capita: Thailand
+Country,Singapore
+Frequency,"Annual, ending ""Dec"" of each year"
+Unit,SGD
+Source,Singapore Tourism Board
+Status,Active
+Series ID,36571601 (SQCBEF)
+SR Code,SR87375
+Function Information,
+First Obs. Date,1998
+Last Obs. Date,2015
+Last Update Time,07/10/2016
+Remarks,
+Mean,1267.5555555555557
+Variance,8292.527777777777
+Standard Deviation,91.06331741034793
+Skewness,0.9006725122956442
+Kurtosis,0.07225614878269493
+Coefficient Variation,0.07184167748011319
+Min,1165
+Max,1440
+Median,1242
+No. of Obs,9
+2007,1165
+2008,1372
+2009,1440
+2010,1276
+2011,1206
+2012,1302
+2013,1242
+2014,1225
+2015,1180
