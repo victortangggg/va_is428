@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Team VEJ Visualization</title>
+
+	<!-- CSS -->
+	<link rel='stylesheet' type='text/css' href='bower_components/bootstrap/dist/css/bootstrap.min.css'/>
+
+	<!-- JavaScript -->
+	<script type='text/javascript' src='bower_components/jQuery/dist/jquery.min.js'></script>
+	<script type='text/javascript' src='bower_components/bootstrap/dist/js/bootstrap.min.js'></script>
+	<script type='text/javascript' src='bower_components/d3/d3.min.js'></script>
+	<script type='text/javascript' src='bower_components/topojson/topojson.min.js'></script>
+
+<!-- 	<style>
+
+		body {
+			margin: 0;/
+			font-weight: 200;
+			font-size: 14px;
+		}
+
+		#geomap {
+			width: 99vw;
+			height: 99vh;
+		}
+
+		svg rect {
+			fill: #FFFAFF;   /* map background colour */
+		}
+
+		.country{
+			fill: #d1d1d1;   /* country colour */
+			stroke: #FFFAFF; /* country border colour */
+			stroke-width: 1.5; /* country border width */
+		}
+
+		.country-on{
+			fill: #4B5358;   /* highlight colour for selected country */
+		}
+
+		.countryLabel{
+			display: none;   /* hide all country labels by default */
+		}
+
+		.countryName{
+			fill: #000000;   /* country label text colour */
+		}
+
+		.countryLabelBg{
+			/*fill: #30BCED;*/   /* country label background colour */
+		}
+
+	</style> -->
+
+	<style type="text/css">
+		.stroke {
+			fill: none;
+			stroke: #000;
+			stroke-width: 3px;
+		}
+
+		.fill {
+			fill: #fff;
+		}
+
+		.graticule {
+			fill: none;
+			stroke: #777;
+			stroke-width: .5px;
+			stroke-opacity: .5;
+		}
+
+		.land {
+			fill: #aaa;
+		}
+
+		.boundary {
+			fill: none;
+			stroke: #fff;
+			stroke-width: .5px;
+		}
+
+		.arc {
+			stroke: #000;
+			fill:	rgba(250,0,0,0.5);
+			stroke-width: 1;
+		}
+	</style>
+</head>
+<body>
+
+	<!-- geographical map visualization -->
+	<div id='geomap'></div>
+
+</body>
+
+<!-- <script type='text/javascript' src='js/geomap/geomap.v1.js'></script> -->
+<script type='text/javascript' src='js/geomap/geomap.v1.js'></script>
+
+</html>
