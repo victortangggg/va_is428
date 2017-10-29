@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Browse by Countries</title>
+
+	<!-- CSS -->
+	<link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.css"/>
+  <link rel="stylesheet" type="text/css" href="css/style.css"/>
+
+	<!-- JavaScript -->
+	<script type="text/javascript" src="bower_components/jQuery/dist/jquery.min.js"></script>
+	<script type="text/javascript" src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="bower_components/d3/d3.min.js"></script>
+  <script type="text/javascript" src="bower_components/highcharts/highcharts.js"></script>
+  <script type="text/javascript" src="bower_components/highcharts/modules/exporting.js"></script>
+
+
+</head>
+
+<body>
+    <div id="container" style="min-width: 400px; height: 400px; margin: 0 auto"></div>
+    
+    <script type="text/javascript">
+      var countriesData = [],
+          yearData = [],
+          visitorArrivalData =[],
+          visitorsDepartedData = [];
+
+      var dateParser = d3.timeParse("%Y");
+
+      // var testData = d3.queue()
+      //                  .defer(d3.csv, "data/num_visitor_arrivals_to_singapore.csv")
+      //                  .defer(d3.csv, "data/num_departure_by_countries.csv")
+      //                  .await(combine);
+
+      // function combine(error, big_data_1, big_data_2) {
+      //     if (error) {
+      //         console.log(error);
+      //     }
+      //     console.log(d3.merge([big_data_1, big_data_2]));
+      // }
+
+      d3.csv("data/comb_visitor_arrivals_vs_departed.csv", function(error,data){
+
+        var dataByYear = data.filter(function(element) {return element.Year == "2010"});
+
+        dataByYear.forEach(function(d){
+          d.Year = dateParser(d.Year);
+          d.Country = d.Country; // '+' just to type cast to numeric
+          d.VisitorArrival = +d.VisitorArrival;
+          d.VisitorDeparted = +d.VisitorDeparted;
+        });
+
+        dataByYear.map(function(d){ 
+            countriesData.push(d.Country);
+            yearData.push(d.Year);
+            visitorArrivalData.push(d.VisitorArrival);
+            visitorsDepartedData.push(d.VisitorDeparted);
+        });
+
+        console.log(countriesData);
+        console.log(yearData);
+        console.log(visitorArrivalData);
+        console.log(visitorsDepartedData);
+
+        Highcharts.chart('container', {
+          chart: {
+              type: 'column'
+          },
+          title: {
+              text: 'Proportion of Tourists Arriving to Singapore'
+          },
+          xAxis: {
+              categories: countriesData
+          },
+          yAxis: [{
+              min: 0,
+              title: {
+                  text: 'Total Number of Visitors Whom'
+              }
+          }, {
+              title: {
+                  text: ''
+              },
+              opposite: true
+          }],
+          legend: {
+              shadow: false
+          },
+          tooltip: {
+              shared: true
+          },
+          plotOptions: {
+              column: {
+                  grouping: false,
+                  shadow: false,
+                  borderWidth: 0
+              }
+          },
+          series: [{
+              name: 'Departed from Home Country',
+              color: 'rgba(165,170,217,1)',
+              data: visitorsDepartedData,
+              pointPadding: 0.3,
+              pointPlacement: 0
+          }, {
+              name: 'Arrived in Singapore',
+              color: 'rgba(126,86,134,.9)',
+              data: visitorArrivalData,
+              pointPadding: 0.4,
+              pointPlacement: 0
+        },]
+        });
+      });
+
+  
+    </script>
+
+</body>
+
+</html>
