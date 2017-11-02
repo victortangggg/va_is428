@@ -214,7 +214,7 @@
 						.attr('class', 'countryName')
 						.style('text-anchor', 'middle')
 						.text(function(d) {
-							return d.properties.nam;e
+							return d.properties.name
 						});
 
 		// // add a background rectangle the same size as the text
@@ -232,3 +232,4 @@
 
 		initiateZoom();
 	});
+
