@@ -1,0 +1,18 @@
+body {
+	/*margin: 0;*/
+}
+
+svg {
+	background-color: #111;
+	cursor: pointer;
+}
+
+.land {
+	fill: #333;
+	stroke: #555;
+	stroke-width: 1;
+}
+
+.earthquake {
+	fill-opacity: 0.6;
+}
