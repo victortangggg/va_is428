@@ -60,6 +60,9 @@ d3.json(geoJson3, function(error, data) {
 					.enter()
 					.append('path')
 					.classed('land', true)
+					.attr('id', function(d) {
+						return 'land'+d.id;
+					})
 					// shaping
 					.attr('d', pathGenerator)
 					// css styling
@@ -147,11 +150,17 @@ d3.csv('data/countries_location.csv', convertType, function(geoData) {
 			let id = d.id;
 			d3.select('#' + id)
 				.style('opacity', 1.0);
+
+			d3.select('#land' + id)
+				.style('fill', '#c66b6b');
 		})
 		.on('mouseout', function(d, i) {
 			let id = d.id;
 			d3.select('#' + id)
 				.style('opacity', 0.4);
+
+			d3.select('#land' + id)
+				.style('fill', '#88a3ce');
 		});
 
 	arcs.exit()
