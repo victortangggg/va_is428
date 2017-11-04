@@ -45,7 +45,7 @@ var geoJson2 = 'js/geomap/worldmap/land.geojson';
 var geoJson3 = 'js/geomap/worldmap/countries.geo.json';
 
 //draw geo map
-var land;
+var land = d3.select('none');
 d3.json(geoJson3, function(error, data) {
 
 	if(error) {
@@ -69,10 +69,19 @@ d3.json(geoJson3, function(error, data) {
 					.on('mouseover', function(d, i) {
 						d3.select(this)
 							.style('fill', '#c66b6b');
+
+						let id = d.id;
+						d3.select('#' + id)
+							.style('opacity', 1.0);
+
 					})
 					.on('mouseout', function(d, i) {
 						d3.select(this)
 							.style('fill', '#88a3ce');
+
+						let id = d.id;
+						d3.select('#' + id)
+							.style('opacity', 0.4);
 					});
 	land.exit()
 		.remove();
@@ -84,17 +93,20 @@ var singapore = {
 	latitude: 1.3521
 };
 
-var arcs;
+var arcs = labels = d3.select('none');
 d3.csv('data/countries_location.csv', convertType, function(geoData) {
-
+	
 	arcs = svg.selectAll('path')
 				.data(geoData, JSON.stringify)
 				.enter()
 				.append('path')
 				.attr('class', 'arc')
+				.attr('id', function(d) {
+					return d.id;
+				})
 				// shaping
 				.attr('d', function(data) {
-					return shapeArc(getCoordinates(data), singapore, 10);	
+					return shapeArc(getCoordinates(data), singapore);	
 				})
 				// css styling
 				.style('fill', '#ff2323')
@@ -103,22 +115,50 @@ d3.csv('data/countries_location.csv', convertType, function(geoData) {
 				.style('opacity', 0.4)
 				.on('mouseover', function(d, i) {
 					d3.select(this)
-						.style('opacity', 1.0)
-						.attr('d', function(d) {
-							return shapeArc(getCoordinates(d), singapore, 30);
-						});
+						.style('opacity', 1.0);
+						// .attr('d', function(d) {
+						// 	return shapeArc(getCoordinates(d), singapore, 30);
+						// });
 				})
 				.on('mouseout', function(d, i) {
 					d3.select(this)
 						.style('opacity', 0.4)
 						.attr('d', function(d) {
-							return shapeArc(getCoordinates(d), singapore, 10);
+							return shapeArc(getCoordinates(d), singapore);
 						});
 				});
+
+	labels = svg.selectAll('text')
+		.data(geoData, JSON.stringify)
+		.enter()
+		.append('text')
+		.style('cursor', 'pointer')
+		.attr('x', function(d) {
+			return _projection([d.longitude, d.latitude])[0];
+			// console.log(d);
+		})
+		.attr('y', function(d) {
+			return _projection([d.longitude, d.latitude])[1];
+		})
+		.text(function(d) {
+			return d.country;
+		})
+		.on('mouseover', function(d, i) {
+			let id = d.id;
+			d3.select('#' + id)
+				.style('opacity', 1.0);
+		})
+		.on('mouseout', function(d, i) {
+			let id = d.id;
+			d3.select('#' + id)
+				.style('opacity', 0.4);
+		});
+
 	arcs.exit()
 		.remove();
 });
 
+// draw magnifying lens
 var lens = svg.append('circle')
 				.attr('class', 'lens')
 				.attr('r', fisheye.radius() * 3.85);
@@ -126,11 +166,23 @@ var lens = svg.append('circle')
 // fisheye zoom
 svg.on('mousemove', function() {
 	fisheye.center(_projection.invert(d3.mouse(this)));
+
 	land.attr('d', null)
 		.attr('d', pathGenerator);
+
 	arcs.attr('d', function(d) {
 		return shapeArc(getCoordinates(d, true), getCoordinates(singapore, true));
 	});
+
+	labels.attr('x', function(d) {
+				let coords = getCoordinates(d, true);
+				return _projection([coords.longitude, coords.latitude])[0];
+			})
+			.attr('y', function(d) {
+				let coords = getCoordinates(d, true);
+				return _projection([coords.longitude, coords.latitude])[1];
+			});
+
 	lens.attr('cx', d3.mouse(this)[0])
 		.attr('cy', d3.mouse(this)[1]);
 });
@@ -159,11 +211,12 @@ function convertType(d) {
 	return {
 		country: d.country,
 		latitude: parseFloat(d.latitude),
-		longitude: parseFloat(d.longitude)
+		longitude: parseFloat(d.longitude),
+		id: d.id
 	};
 }
 
-function shapeArc(from, to, trade=10) {
+function shapeArc(from, to, trade=20) {
 	var origin = _projection([from.longitude, from.latitude]);
 	var dest = _projection([to.longitude, to.latitude]);
 	var mid = [(origin[0] + dest[0]) / 2, (origin[1] + dest[1]) / 2];
