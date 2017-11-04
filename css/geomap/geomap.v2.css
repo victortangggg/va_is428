@@ -2,17 +2,13 @@ body {
 	/*margin: 0;*/
 }
 
-svg {
-	background-color: #111;
+.arc {
 	cursor: pointer;
 }
 
-.land {
-	fill: #333;
-	stroke: #555;
-	stroke-width: 1;
-}
-
-.earthquake {
-	fill-opacity: 0.6;
+.lens {
+	stroke: gray;
+	stroke-width: 2.5px;
+	stroke-opacity: 1.0;
+	fill: none;
 }
