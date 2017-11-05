@@ -2,10 +2,11 @@
 <html>
 <head>
 	<title>Browse by Countries</title>
+  <!-- Fonts -->
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css'>
 
 	<!-- CSS -->
 	<link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.css"/>
-  <link rel="stylesheet" type="text/css" href="css/style.css"/>
 
 	<!-- JavaScript -->
 	<script type="text/javascript" src="bower_components/jQuery/dist/jquery.min.js"></script>
@@ -13,21 +14,40 @@
 	<script type="text/javascript" src="bower_components/d3/d3.min.js"></script>
   <script type="text/javascript" src="bower_components/highcharts/highcharts.js"></script>
   <script type="text/javascript" src="bower_components/highcharts/modules/exporting.js"></script>
+  
+  <style type="text/css">
+      body {
+        font-family: 'Open Sans', sans-serif;
+        font-size: 11px;
+        font-weight: 300;
+        fill: #242424;
+        text-align: center;
+        text-shadow: 0 1px 0 #fff, 1px 0 0 #fff, -1px 0 0 #fff, 0 -1px 0 #fff;
+        cursor: default;
+      }
 
-
+      .chart {
+        display: inline-block;
+      }
+  </style>
 </head>
 
 <body>
-    <div id="container" style="min-width: 400px; height: 400px; margin: 0 auto"></div>
-    
-    <select id="select-year">
-        <option value="2010">2010</option>
-        <option value="2011" selected>2011</option>
-        <option value="2012">2012</option>
-        <option value="2013">2013</option>
-        <option value="2014">2014</option>
-        <option value="2015">2015</option>
-    </select>
+    <form class="form-inline" role="form">
+      <div class="form-group" align="middle">
+        <label>Year:</label>
+        <select class="form-control" id="select-year">
+            <option value="2010">2010</option>
+            <option value="2011">2011</option>
+            <option value="2012">2012</option>
+            <option value="2013">2013</option>
+            <option value="2014">2014</option>
+            <option value="2015" selected>2015</option>
+        </select>
+      </div>
+    </form>
+    <div id="barChartContainer" class="chart" style="min-width: 400px; height: 400px; margin: 0 auto"></div>
+    <div id="lineChartContainer" class="chart" style="min-width: 400px; height: 400px; margin: 0 auto"></div>
 
     <script type="text/javascript">
       var countriesData = [],
@@ -36,6 +56,7 @@
           visitorsDepartedData = [];
 
       var dateParser = d3.timeParse("%Y");
+      var dateFormat = d3.timeFormat("%Y");
 
       // var testData = d3.queue()
       //                  .defer(d3.csv, "data/num_visitor_arrivals_to_singapore.csv")
@@ -48,17 +69,134 @@
       //     }
       //     console.log(d3.merge([big_data_1, big_data_2]));
       // }
-      console.log(d3.select('#select-year').node().value);
-
-      select_element = $("#select-year");
-      $(select_element).on("change", function() {
-
-        //dataByYear = data.filter(function(element) {return element.Year == d3.select('#select-year').node().value;});
-        console.log("current selection " + select_element.val());
-        //chart.series[0].setData(data,true);
-      });
+      // console.log(d3.select('#select-year').node().value);
 
       d3.csv("data/comb_visitor_arrivals_vs_departed.csv", function(error,data){
+        select_element = $("#select-year");
+        $(select_element).on("change", function() {
+          select_element = $("#select-year");
+          countriesData = [];
+          yearData = [];
+          visitorArrivalData =[];
+          visitorsDepartedData = [];
+          //dataByYear = data.filter(function(element) {return element.Year == d3.select('#select-year').node().value;});
+          // console.log("current selection " + select_element.val());
+          //chart.series[0].setData(data,true);
+
+          //to fix error here - if view same year twice, the third time will show nothing
+          var dataByYear = data.filter(function(element) {return (dateFormat(element.Year) == d3.select('#select-year').node().value) || (element.Year == d3.select('#select-year').node().value);});
+
+          console.log(d3.select('#select-year').node().value);
+          console.log(data);
+
+          dataByYear.forEach(function(d){
+            d.Year = dateParser(d.Year);
+            d.Country = d.Country; // '+' just to type cast to numeric
+            d.VisitorArrival = +d.VisitorArrival;
+            d.VisitorDeparted = +d.VisitorDeparted;
+          });
+          
+          //sort in descending
+          function sortByKey(array, key) {
+              return array.sort(function(a, b) {
+                  var x = a[key]; var y = b[key];
+                  return ((x > y) ? -1 : ((x < y) ? 1 : 0));
+              });
+          }
+          dataByYear = sortByKey(dataByYear, 'VisitorArrival');
+          //end sort
+
+          dataByYear.map(function(d){ 
+              countriesData.push(d.Country);
+              yearData.push(d.Year);
+              visitorArrivalData.push(d.VisitorArrival);
+              visitorsDepartedData.push(d.VisitorDeparted);
+          });
+
+          console.log(countriesData);
+          console.log(yearData);
+          console.log(visitorArrivalData);
+          console.log(visitorsDepartedData);
+
+          Highcharts.chart('barChartContainer', {
+            chart: {
+                type: 'column',
+                width: 675
+            },
+            title: {
+                text: null//'Proportion of Tourists Arriving to Singapore'
+            },
+            xAxis: {
+                categories: countriesData,
+                // lineWidth: 0,
+                gridLineWidth: 0.5
+                // lineColor: 'transparent',
+                // labels: {
+                //     enabled: false
+                // },
+                // minorTickLength: 0,
+                // tickLength: 0
+            },
+            yAxis: [{
+                min: 0,
+                gridLineWidth: 0.5,
+                title: {
+                  text: 'Arrived in Singapore',
+                  style:{
+                    color: 'rgba(126,86,134,.9)'
+                  }
+                },
+                labels:{
+                  style:{
+                    color: 'rgba(126,86,134,.9)'   
+                  }
+                }
+            }, {
+                min: 0,
+                title: {
+                  text: 'Departed from Home Country',
+                  style:{
+                    color: 'rgba(165,170,217,1)'
+                  }
+                },
+                labels:{
+                  style:{
+                    color: 'rgba(165,170,217,1)'
+                  }
+                },
+                opposite: true
+            }],
+            legend: {
+                shadow: false
+            },
+            tooltip: {
+                shared: true
+            },
+            plotOptions: {
+                column: {
+                    grouping: false,
+                    shadow: false,
+                    borderWidth: 0
+                }
+            },
+            series: [{
+                name: 'Arrived in Singapore',
+                color: 'rgba(126,86,134,.9)',
+                data: visitorArrivalData,
+                pointPadding: 0.3,
+                pointPlacement: -0.2
+          },{
+                name: 'Departed from Home Country',
+                color: 'rgba(165,170,217,1)',
+                data: visitorsDepartedData,
+                pointPadding: 0.3,
+                pointPlacement: 0.2,
+                yAxis: 1
+            }]
+          });
+        });
+
+
         var dataByYear = data.filter(function(element) {return element.Year == d3.select('#select-year').node().value;});
 
         dataByYear.forEach(function(d){
@@ -67,6 +205,16 @@
           d.VisitorArrival = +d.VisitorArrival;
           d.VisitorDeparted = +d.VisitorDeparted;
         });
+        
+        //sort in descending
+        function sortByKey(array, key) {
+            return array.sort(function(a, b) {
+                var x = a[key]; var y = b[key];
+                return ((x > y) ? -1 : ((x < y) ? 1 : 0));
+            });
+        }
+        dataByYear = sortByKey(dataByYear, 'VisitorArrival');
+        //end sort
 
         dataByYear.map(function(d){ 
             countriesData.push(d.Country);
@@ -75,29 +223,56 @@
             visitorsDepartedData.push(d.VisitorDeparted);
         });
 
-        console.log(countriesData);
-        console.log(yearData);
-        console.log(visitorArrivalData);
-        console.log(visitorsDepartedData);
+        // console.log(countriesData);
+        // console.log(yearData);
+        // console.log(visitorArrivalData);
+        // console.log(visitorsDepartedData);
 
-        Highcharts.chart('container', {
+        Highcharts.chart('barChartContainer', {
           chart: {
-              type: 'column'
+              type: 'column',
+              width: 675
           },
           title: {
-              text: 'Proportion of Tourists Arriving to Singapore'
+              text: null//'Proportion of Tourists Arriving to Singapore'
           },
           xAxis: {
-              categories: countriesData
+              categories: countriesData,
+              // lineWidth: 0,
+              gridLineWidth: 0.5
+              // lineColor: 'transparent',
+              // labels: {
+              //     enabled: false
+              // },
+              // minorTickLength: 0,
+              // tickLength: 0
           },
           yAxis: [{
               min: 0,
+              gridLineWidth: 0.5,
               title: {
-                  text: 'Total Number of Visitors Whom'
+                text: 'Arrived in Singapore',
+                style:{
+                  color: 'rgba(126,86,134,.9)'
+                }
+              },
+              labels:{
+                style:{
+                  color: 'rgba(126,86,134,.9)'   
+                }
               }
           }, {
+              min: 0,
               title: {
-                  text: ''
+                text: 'Departed from Home Country',
+                style:{
+                  color: 'rgba(165,170,217,1)'
+                }
+              },
+              labels:{
+                style:{
+                  color: 'rgba(165,170,217,1)'
+                }
               },
               opposite: true
           }],
@@ -115,22 +290,88 @@
               }
           },
           series: [{
+              name: 'Arrived in Singapore',
+              color: 'rgba(126,86,134,.9)',
+              data: visitorArrivalData,
+              pointPadding: 0.3,
+              pointPlacement: -0.2
+        },{
               name: 'Departed from Home Country',
               color: 'rgba(165,170,217,1)',
               data: visitorsDepartedData,
               pointPadding: 0.3,
-              pointPlacement: 0
-          }, {
-              name: 'Arrived in Singapore',
-              color: 'rgba(126,86,134,.9)',
-              data: visitorArrivalData,
-              pointPadding: 0.4,
-              pointPlacement: 0
-        },]
+              pointPlacement: 0.2,
+              yAxis: 1
+          }]
         });
       });
+    </script>
 
-  
+    <script type="text/javascript">
+      var lineChartResults=[];
+
+      d3.csv("data/comb_visitor_arrivals_vs_departed.csv", function(error,data){
+
+        data.forEach(function(d){
+          d.Year = dateParser(d.Year);
+          d.Country = d.Country; // '+' just to type cast to numeric
+          d.VisitorArrival = +d.VisitorArrival;
+          d.VisitorDeparted = +d.VisitorDeparted;
+        });
+
+        data.forEach(function(d){
+            var status = false;
+            var lineChartObj = {};
+            lineChartObj.data = [];
+            for(i = 0; i < lineChartResults.length; i++){
+              //console.log(lineChartResults[i].id);
+              if((lineChartResults[i].name)==(d.Country)){
+                lineChartObj = lineChartResults[i];
+                status = true;
+                break;
+              }
+            }
+            lineChartObj.data.push(d.VisitorArrival);
+            if (status == false){
+              lineChartObj.name = d.Country;
+              lineChartResults.push(lineChartObj); 
+            }
+          });
+
+        console.log(lineChartResults);
+
+        Highcharts.chart('lineChartContainer', {
+          chart: {
+              type: 'line',
+              width: 650
+          },
+          title: {
+              text: null//'Overall Country Expenditure'
+          },
+          // subtitle: {
+          //     text: 'Total Expenditure of Country (2013 - 2015)'
+          //},
+          xAxis: {
+              categories: [2010,2011,2012,2013,2014,2015]
+          },
+          yAxis: {
+              type: 'logarithmic',
+              minorTickInterval: 0.1,
+              title: {
+                  text: 'Visitor Arrivals'
+              }
+          },
+          plotOptions: {
+              line: {
+                  dataLabels: {
+                      enabled: false
+                  },                    
+                  enableMouseTracking: true
+              },
+          },
+          series: lineChartResults
+        });
+      });
     </script>
 
 </body>

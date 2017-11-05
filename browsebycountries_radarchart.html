@@ -43,7 +43,6 @@
     </style>
   </head>
   <body>
-
     <form class="form-inline" role="form">
       <div class="form-group" align="middle">
           <label>Country:</label>
@@ -70,9 +69,21 @@
             </optgroup>
           </select>
           <label>Year:</label>
-          <button type="button" class="btn btn-default" id="yearbtn-2013" value="2013">2013</button>
+<!--           <button type="button" class="btn btn-default" id="yearbtn-2013" value="2013">2013</button>
           <button type="button" class="btn btn-default" id="yearbtn-2014" value="2014">2014</button>
           <button type="button" class="btn btn-default" id="yearbtn-2015" value="2015">2015</button>
+ -->
+          <div class="btn-group" data-toggle="buttons">
+            <label class="btn btn-default" >
+              <input type="radio" name="options" id="yearbtn-2013" value="2013">2013
+            </label>
+            <label class="btn btn-default">
+              <input type="radio" name="options" id="yearbtn-2014" value="2014">2014
+            </label>
+            <label class="btn btn-default">
+              <input type="radio" name="options" id="yearbtn-2015" value="2015" checked>2015
+            </label>
+          </div>
       </div>
     </form>
 
@@ -195,6 +206,52 @@
           }); 
 
           $(document).ready(function() {
+            $('input[name=options]').change(function(){
+              console.log($('input[name=options]:checked').val()); 
+              var btnYearValue = $('input[name=options]:checked').val(); 
+
+              results = [];
+
+              var yearData = data.filter(function(element) {return element.Year == btnYearValue});
+              
+              var countryData = 
+                  yearData.filter(function(element) {return (element.Country == country || element.Country == "Average")});
+
+              var obj = {};
+              countryData.forEach(function(d){
+                // console.log(d);
+                var newObj = {};
+                newObj.name = d.Country;
+                newObj.axes = [];
+                newObj.axes.push({axis: "Accommodation", value: +d.Accommodation});
+                newObj.axes.push({axis: "Food And Beverage", value: +d.FoodAndBeverage});
+                newObj.axes.push({axis: "Shopping", value: +d.Shopping});
+                newObj.axes.push({axis: "Local Transport", value: +d.LocalTransport});
+                newObj.axes.push({axis: "Medical", value: +d.Medical});
+                newObj.axes.push({axis: "Others", value: +d.Others});
+                results.push(newObj);
+              });
+
+              var radarChartOptions = {
+                w: 290,
+                h: 350,
+                margin: margin,
+                levels: 5,
+                roundStrokes: true,
+                // color: d3.scaleOrdinal(d3.schemeCategory20),//.range(["#AFC52F", "#ff6600"]),
+                color: d3.scaleOrdinal().range(["#AFC52F", "#ff6600"]),
+                legend: { title: 'Expenditure Breakdown (S$m)', translateX: 250, translateY: 40 },
+                format: '.0f'
+              };
+
+              //d3.selectAll(".radarChart").remove();
+              //console.log(results);
+              // Draw the chart, get a reference the created svg element :
+              svg_radar1 = RadarChart("#radarChart", results, radarChartOptions);
+
+            });
+
+            /*  //changed from buttons to radiobutton
             $('#yearbtn-2013').click(function() {
               var btnYearValue = ($(this).attr("value"));
               results = [];
@@ -317,9 +374,10 @@
               // Draw the chart, get a reference the created svg element :
               svg_radar1 = RadarChart("#radarChart", results, radarChartOptions);
             });
+            */
           });
-
         }); 
+
 
       var data = [
         { name: 'Indonesia',
@@ -630,8 +688,9 @@
             }
           }
         });
+        console.log("linechartresults: ");
         console.log(lineChartResults);
-      
+        
 
         Highcharts.chart('container', {
             chart: {
@@ -651,7 +710,9 @@
                 title: {
                     //align: 'low',
                     //offset: 0,
-                    text: 'Overall Expenditure ($Sm)',
+                    text: 'Visitor Arrivals',
+                    type: 'logarithmic',
+                    minorTickInterval: 0.1
                     //rotation: 0,
                     //y: -10
                 }
