@@ -339,6 +339,12 @@
           });
 
         console.log(lineChartResults);
+        Highcharts.theme = {
+          colors: ['#FF067E', '#E406E8', '#AF07FF', '#5B06E8', '#2C1BFF', '#F314FF', 
+                   '#E80C83', '#FF0100', '#E8300C', '#FF5C0D', '#FF7A50', '#E8772B']
+        };
+
+        Highcharts.setOptions(Highcharts.theme);
 
         Highcharts.chart('lineChartContainer', {
           chart: {
@@ -358,7 +364,7 @@
               type: 'logarithmic',
               minorTickInterval: 0.1,
               title: {
-                  text: 'Visitor Arrivals'
+                  text: 'Total Visitor Arrivals'
               }
           },
           plotOptions: {
@@ -371,6 +377,28 @@
                   },                    
                   enableMouseTracking: true
               },
+              series:{
+                events:{
+                  legendItemClick: function(event) {
+                    if (!this.visible)
+                        return false;
+
+                    var seriesIndex = this.index;
+                    var series = this.chart.series;
+
+                    for (var i = 0; i < series.length; i++)
+                    {
+                        if (series[i].index != seriesIndex)
+                        {
+                            series[i].visible ?
+                            series[i].hide() :
+                            series[i].show();
+                        } 
+                    }
+                    return false;
+                  }
+                }
+              }
           },
           series: lineChartResults
         });
