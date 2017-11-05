@@ -20,6 +20,15 @@
 <body>
     <div id="container" style="min-width: 400px; height: 400px; margin: 0 auto"></div>
     
+    <select id="select-year">
+        <option value="2010">2010</option>
+        <option value="2011" selected>2011</option>
+        <option value="2012">2012</option>
+        <option value="2013">2013</option>
+        <option value="2014">2014</option>
+        <option value="2015">2015</option>
+    </select>
+
     <script type="text/javascript">
       var countriesData = [],
           yearData = [],
@@ -39,10 +48,18 @@
       //     }
       //     console.log(d3.merge([big_data_1, big_data_2]));
       // }
+      console.log(d3.select('#select-year').node().value);
+
+      select_element = $("#select-year");
+      $(select_element).on("change", function() {
+
+        //dataByYear = data.filter(function(element) {return element.Year == d3.select('#select-year').node().value;});
+        console.log("current selection " + select_element.val());
+        //chart.series[0].setData(data,true);
+      });
 
       d3.csv("data/comb_visitor_arrivals_vs_departed.csv", function(error,data){
-
-        var dataByYear = data.filter(function(element) {return element.Year == "2010"});
+        var dataByYear = data.filter(function(element) {return element.Year == d3.select('#select-year').node().value;});
 
         dataByYear.forEach(function(d){
           d.Year = dateParser(d.Year);
