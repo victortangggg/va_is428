@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Browse by Countries</title>
+	<title>Tourist Arrivals</title>
   <!-- Fonts -->
   <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css'>
 
@@ -120,6 +120,9 @@
           console.log(visitorsDepartedData);
 
           Highcharts.chart('barChartContainer', {
+            credits: {
+              enabled: false
+            },
             chart: {
                 type: 'column',
                 width: 675
@@ -230,6 +233,9 @@
         // console.log(visitorsDepartedData);
 
         Highcharts.chart('barChartContainer', {
+          credits: {
+              enabled: false
+          },
           chart: {
               type: 'column',
               width: 675
@@ -348,6 +354,9 @@
         Highcharts.setOptions(Highcharts.theme);
 
         Highcharts.chart('lineChartContainer', {
+          credits: {
+              enabled: false
+          },
           chart: {
               type: 'line',
               width: 650
