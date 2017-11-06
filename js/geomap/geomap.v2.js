@@ -96,9 +96,21 @@ var singapore = {
 	latitude: 1.3521
 };
 
+var tooltip = d3.tip()
+				.offset([-10, 0])
+				.attr('class', 'd3-tip')
+				.html(function(d) {
+					let content = '<h5>Visitor Arrivals: </h5>' + d.toLocaleString('en') +'<br>';
+					content += '<h5>Visitor Arrivals: </h5>' + d.toLocaleString('en') +'<br>';
+					content += '<h5>Visitor Arrivals: </h5>' + d.toLocaleString('en') +'<br>';
+					return content;
+				});
+
 var arcs = labels = d3.select('none');
 d3.csv('data/countries_location.csv', convertType, function(geoData) {
 	
+	// console.log(geoData);
+
 	arcs = svg.selectAll('path')
 				.data(geoData, JSON.stringify)
 				.enter()
@@ -109,12 +121,12 @@ d3.csv('data/countries_location.csv', convertType, function(geoData) {
 				})
 				// shaping
 				.attr('d', function(data) {
-					return shapeArc(getCoordinates(data), singapore);	
+					return shapeArc(getCoordinates(data), singapore, trade=convertVisitorArrivalValue(data.Y2016));	
 				})
 				// css styling
 				.style('fill', '#ff2323')
 				.style('stroke', '#2b2b2b')
-				.style('stroke-width', 0.5)
+				.style('stroke-width', 1.5)
 				.style('opacity', 0.4)
 				.on('mouseover', function(d, i) {
 					d3.select(this)
@@ -125,10 +137,10 @@ d3.csv('data/countries_location.csv', convertType, function(geoData) {
 				})
 				.on('mouseout', function(d, i) {
 					d3.select(this)
-						.style('opacity', 0.4)
-						.attr('d', function(d) {
-							return shapeArc(getCoordinates(d), singapore);
-						});
+						.style('opacity', 0.4);
+						// .attr('d', function(d) {
+						// 	return shapeArc(getCoordinates(d), singapore);
+						// });
 				});
 
 	labels = svg.selectAll('text')
@@ -153,6 +165,8 @@ d3.csv('data/countries_location.csv', convertType, function(geoData) {
 
 			d3.select('#land' + id)
 				.style('fill', '#c66b6b');
+
+			tooltip.show(d.Y2016);
 		})
 		.on('mouseout', function(d, i) {
 			let id = d.id;
@@ -161,7 +175,11 @@ d3.csv('data/countries_location.csv', convertType, function(geoData) {
 
 			d3.select('#land' + id)
 				.style('fill', '#88a3ce');
+
+			tooltip.hide();
 		});
+
+	labels.call(tooltip);
 
 	arcs.exit()
 		.remove();
@@ -180,7 +198,7 @@ svg.on('mousemove', function() {
 		.attr('d', pathGenerator);
 
 	arcs.attr('d', function(d) {
-		return shapeArc(getCoordinates(d, true), getCoordinates(singapore, true));
+		return shapeArc(getCoordinates(d, true), getCoordinates(singapore, true), trade=convertVisitorArrivalValue(d.Y2016));
 	});
 
 	labels.attr('x', function(d) {
@@ -202,6 +220,10 @@ HELPER FUNCTIONS
 
 */
 
+function convertVisitorArrivalValue(value) {
+	return (value * 2) / 100000;
+}
+
 function getCoordinates(data, forFishEye=false) {
 	if(forFishEye) {
 		return {
@@ -221,7 +243,14 @@ function convertType(d) {
 		country: d.country,
 		latitude: parseFloat(d.latitude),
 		longitude: parseFloat(d.longitude),
-		id: d.id
+		id: d.id,
+		Y2010: parseInt(d.Y2010),
+		Y2011: parseInt(d.Y2011),
+		Y2012: parseInt(d.Y2012),
+		Y2013: parseInt(d.Y2013),
+		Y2014: parseInt(d.Y2014),
+		Y2015: parseInt(d.Y2015),
+		Y2016: parseInt(d.Y2016)
 	};
 }
 
