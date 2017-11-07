@@ -14,7 +14,7 @@ svg.attr('width', width)
 	.attr('height', height);
 
 var _projection = d3.geoEquirectangular()
-					.scale([width / (2 * Math.PI)])
+					.scale([width / (2.5 * Math.PI)])
 					.translate([width/2, height/2]);
 
 var fisheye = d3.fisheye();
