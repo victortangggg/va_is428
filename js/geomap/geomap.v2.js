@@ -1,6 +1,6 @@
 
-var width = window.innerWidth,
-	height = window.innerHeight - 100;
+var width = window.innerWidth-50,
+	height = window.innerHeight-110;
 
 var year = $("#geomap_year").val();
 // console.log(year);
@@ -19,7 +19,7 @@ svg.attr('width', width)
 
 var _projection = d3.geoEquirectangular()
 					.scale([width / (2 * Math.PI)])
-					.translate([width/2, height/2]);
+					.translate([width/2, height/2+50]);
 
 var fisheye = d3.fisheye();
 
@@ -39,7 +39,7 @@ var projection = d3.geoProjection(function(x, y) {
 						return [p[0], -p[1]];
 					})
 					.scale(1)
-					.translate([width/2, height/2]);
+					.translate([width/2, height/2+50]);
 
 var pathGenerator = d3.geoPath()
 						.projection(projection);
@@ -92,6 +92,15 @@ function plotMap() {
 							d3.select('#' + id)
 								.style('opacity', 0.4);
 						});
+				
+				// map title
+				svg.append('text')
+					.text('Top 13 Visitors to Singapore')
+					.attr('x', 20)
+					.attr('y', 500)
+					.style('z-index', 999)
+					.style('font-size', 30)
+					.style('text-decoration', 'underline');
 		land.exit()
 			.remove();
 	});

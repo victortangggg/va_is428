@@ -41,6 +41,10 @@
 
 	<style type="text/css">
 		
+		body {
+			font-family: 'Open Sans', sans-serif !important;
+		}
+
 		.chart {
 			display: inline-block;
 		}
@@ -64,7 +68,7 @@
 		}
 
 		#polina { 
-			font-family: Agenda-Light, Agenda Light, Agenda, Arial Narrow, sans-serif;
+			font-family: 'Open Sans', sans-serif;
 			font-weight:100; 
 			background: rgba(0,0,0,0.3);
 			color: white;
@@ -73,6 +77,15 @@
 			margin:2rem;
 			float: right;
 			font-size: 1.2rem;
+		}
+
+		.legend {
+			font-family: 'Raleway', sans-serif;
+			fill: #333333;
+		}
+
+		.chart {
+			display: inline-block;
 		}
 	</style>
 </head>
@@ -103,8 +116,8 @@
 			<section id="page2">
 				<div class="content">
 					<div class="container-fluid">
-						<div id='geomap'></div>
 						<div class="row">
+							<div id='geomap'></div>
 							<div class="col-md-2">
 								<div class="form-group">
 									<label>Year: </label>
@@ -118,14 +131,13 @@
 										<option value="2010">2010</option>
 									</select>
 								</div>
-
 							</div>
 						</div>
 					</div>
 				</div>
 			</section>
 
-			<!-- page 3 - class section-gray adds gray background-->
+			<!-- page 3 -->
 			<section id="page3" >
 				<div class="content">
 					<div class="container-fluid">
@@ -149,15 +161,16 @@
 				</div>
 			</section>
 
+			<!-- page 4 -->
 			<section id="page4">
 				<div class="content">
 					<div class="container-fluid">
 						<div class="row">
 							<h2><label>Tourist Expenditures</label></h2>
 							<form class="form-inline" role="form">
-								<div class="form-group" align="middle">
+								<div class="form-group">
 									<label>Country:</label>
-									<select class="form-control" id="dropDownCountry"">
+									<select class="form-control" id="dropDownCountry">
 										<optgroup label="Asia-Pacific">
 											<option value="Australia">Australia</option>
 											<option value="China">China</option>
