@@ -106,7 +106,7 @@ var countriesData = [],
             }, {
                 min: 0,
                 title: {
-                  text: 'Departed from Home Country',
+                  text: 'Departed from Home Country,',
                   style:{
                     color: 'rgba(165,170,217,1)'
                   }
@@ -116,7 +116,7 @@ var countriesData = [],
                     color: 'rgba(165,170,217,1)'
                   }
                 },
-                opposite: true
+                opposite: false
             }],
             legend: {
                 shadow: false
@@ -132,19 +132,19 @@ var countriesData = [],
                 }
             },
             series: [{
+                name: 'Departed from Home Country',
+                color: 'rgba(165,170,217,1)',
+                data: visitorsDepartedData,
+                pointPadding: 0.1,
+                pointPlacement: 0//,
+                //yAxis: 1
+            },{
                 name: 'Arrived in Singapore',
                 color: 'rgba(126,86,134,.9)',
                 data: visitorArrivalData,
                 pointPadding: 0.3,
-                pointPlacement: -0.2
-          },{
-                name: 'Departed from Home Country',
-                color: 'rgba(165,170,217,1)',
-                data: visitorsDepartedData,
-                pointPadding: 0.3,
-                pointPlacement: 0.2,
-                yAxis: 1
-            }]
+                pointPlacement: 0
+            },]
           });
         });
 
@@ -220,7 +220,7 @@ var countriesData = [],
           }, {
               min: 0,
               title: {
-                text: 'Departed from Home Country',
+                text: 'Departed from Home Country,',
                 style:{
                   color: 'rgba(165,170,217,1)'
                 }
@@ -230,7 +230,7 @@ var countriesData = [],
                   color: 'rgba(165,170,217,1)'
                 }
               },
-              opposite: true
+              opposite: false
           }],
           legend: {
               shadow: false
@@ -246,19 +246,19 @@ var countriesData = [],
               }
           },
           series: [{
+              name: 'Departed from Home Country',
+              color: 'rgba(165,170,217,1)',
+              data: visitorsDepartedData,
+              pointPadding: 0.1,
+              pointPlacement: 0//,
+              //yAxis: 1
+          },{
               name: 'Arrived in Singapore',
               color: 'rgba(126,86,134,.9)',
               data: visitorArrivalData,
               pointPadding: 0.3,
-              pointPlacement: -0.2
-        },{
-              name: 'Departed from Home Country',
-              color: 'rgba(165,170,217,1)',
-              data: visitorsDepartedData,
-              pointPadding: 0.3,
-              pointPlacement: 0.2,
-              yAxis: 1
-          }]
+              pointPlacement: 0
+        }]
         });
       });
 
