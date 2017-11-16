@@ -1,45 +1,46 @@
 body {
-		font: 12px Arial;
-     }
-path {
-	stroke: skyblue;
-	stroke- width: 4;
-	fill : none;
-	}
-
-
-.line {
-  fill: none;
-  stroke-width: 2px;
+    font-family: 'Open Sans', sans-serif !important;
 }
 
-.axis {
-  font: 12px sans-serif;
+.chart {
+    display: inline-block;
 }
 
-.axis path,
-.axis line {
-	fill : none;
-	stroke: grey;
-	stroke- width: 1 ;
-	shape- rendering: crispEdges;
+#video-background {
+    width: 100%;
+}
 
-	}
+video { 
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -100;
+    transform: translateX(-50%) translateY(-50%);
+    background-size: cover;
+    transition: 1s opacity;
+}
+
+#overlay-text { 
+    font-family: 'Open Sans', sans-serif;
+    font-weight:100; 
+    background: rgba(0,0,0,0.6);
+    color: white;
+    padding: 2rem;
+    width: 80%;
+    margin:2rem;
+    float: right;
+    font-size: 1.3rem;
+}
+
 .legend {
-    font-size: 12px;
-    font-weight: bold;
-    text-anchor: middle;
+    font-family: 'Raleway', sans-serif;
+    fill: #333333;
 }
 
-div.tooltip {
-  position: absolute;
-  text-align: center;
-  width: 150px;
-  height: 30px;
-  padding: 2px;
-  font: 12px sans-serif;
-  background: skyblue;
-  border: 0px;
-  border-radius: 8px;
-  pointer-events: none;
+.chart {
+    display: inline-block;
 }

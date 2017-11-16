@@ -1,0 +1,45 @@
+body {
+		font: 12px Arial;
+     }
+path {
+	stroke: skyblue;
+	stroke- width: 4;
+	fill : none;
+	}
+
+
+.line {
+  fill: none;
+  stroke-width: 2px;
+}
+
+.axis {
+  font: 12px sans-serif;
+}
+
+.axis path,
+.axis line {
+	fill : none;
+	stroke: grey;
+	stroke- width: 1 ;
+	shape- rendering: crispEdges;
+
+	}
+.legend {
+    font-size: 12px;
+    font-weight: bold;
+    text-anchor: middle;
+}
+
+div.tooltip {
+  position: absolute;
+  text-align: center;
+  width: 150px;
+  height: 30px;
+  padding: 2px;
+  font: 12px sans-serif;
+  background: skyblue;
+  border: 0px;
+  border-radius: 8px;
+  pointer-events: none;
+}
