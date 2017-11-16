@@ -2,6 +2,7 @@
 <html>
 <head>
 	<title>IS428 - Team VEJ</title>
+	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
 
 	<!-- Bootstrap and Font Awesome css-->
 	<!-- we use cdn but you can also include local files located in css directory-->
@@ -27,7 +28,7 @@
 	<script type="text/javascript" src="bower_components/d3/d3.min.js"></script>
 
 	<!-- geomap -->
-	<script type='text/javascript' src='bower_components/topojson/topojson.min.js'></script>
+	<!-- <script type='text/javascript' src='bower_components/topojson/topojson.min.js'></script> -->
 	<script type='text/javascript' src='js/geomap/fisheye.js'></script>
 	<script type='text/javascript' src='bower_components/d3-tip/index.js'></script>
 
@@ -67,16 +68,16 @@
 			transition: 1s opacity;
 		}
 
-		#polina { 
+		#overlay-text { 
 			font-family: 'Open Sans', sans-serif;
 			font-weight:100; 
-			background: rgba(0,0,0,0.3);
+			background: rgba(0,0,0,0.6);
 			color: white;
 			padding: 2rem;
-			width: 33%;
+			width: 80%;
 			margin:2rem;
 			float: right;
-			font-size: 1.2rem;
+			font-size: 1.3rem;
 		}
 
 		.legend {
@@ -103,9 +104,12 @@
 								<source src="singapore.mp4" type="video/mp4">
 							</video>
 						</div>
-						<div id="polina">
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur porta dictum turpis, eu mollis justo gravida ac. Proin non eros blandit, rutrum est a, cursus quam. Nam ultricies, velit ac suscipit vehicula, turpis eros sollicitudin lacus, at convallis mauris magna non justo. Etiam et suscipit elit. Morbi eu ornare nulla, sit amet ornare est. Sed vehicula ipsum a mattis dapibus. Etiam volutpat vel enim at auctor.</p>
-							<p>Aenean pharetra convallis pellentesque. Vestibulum et metus lectus. Nunc consectetur, ipsum in viverra eleifend, erat erat ultricies felis, at ultricies mi massa eu ligula. Suspendisse in justo dapibus metus sollicitudin ultrices id sed nisl.</p>
+						<div id="overlay-text">
+							<h3>Project Objectives:</h3>
+							<p>Understand which countries are sending the most tourists to Singapore</p>
+							<p>Analyse the proportion of tourists coming to Singapore against the total outbound residents of the country</p>
+							<p>Compare the expenditure and income patterns of these tourists</p>
+							<p>Drill-down on the exact expenditure items</p>
 						</div>
 					</div>
 				</div>
@@ -114,23 +118,21 @@
 
 			<!-- page 2-->
 			<section id="page2">
-				<div class="content">
-					<div class="container-fluid">
-						<div class="row">
-							<div id='geomap'></div>
-							<div class="col-md-2">
-								<div class="form-group">
-									<label>Year: </label>
-									<select class="form-control" id="geomap_year">
-										<option value="2016">2016</option>
-										<option value="2015">2015</option>
-										<option value="2014">2014</option>
-										<option value="2013">2013</option>
-										<option value="2012">2012</option>
-										<option value="2011">2011</option>
-										<option value="2010">2010</option>
-									</select>
-								</div>
+				<div class="container-fluid">
+					<div class="row">
+						<div id='geomap'></div>
+						<div class="col-md-2">
+							<div class="form-group">
+								<label>Year: </label>
+								<select class="form-control" id="geomap_year">
+									<option value="2016">2016</option>
+									<option value="2015" selected>2015</option>
+									<option value="2014">2014</option>
+									<option value="2013">2013</option>
+									<option value="2012">2012</option>
+									<option value="2011">2011</option>
+									<option value="2010">2010</option>
+								</select>
 							</div>
 						</div>
 					</div>
@@ -139,32 +141,35 @@
 
 			<!-- page 3 -->
 			<section id="page3" >
-				<div class="content">
-					<div class="container-fluid">
-						<h2><label>Tourist Arrivals</label></h2>
-						<form class="form-inline" role="form">
-							<div class="form-group" align="middle">
-								<label>Year:</label>
-								<select class="form-control" id="select-year">
-									<option value="2010">2010</option>
-									<option value="2011">2011</option>
-									<option value="2012">2012</option>
-									<option value="2013">2013</option>
-									<option value="2014">2014</option>
-									<option value="2015" selected>2015</option>
-								</select>
-							</div>
-						</form>
-						<div id="barChartContainer" class="chart" style="min-width: 400px; height: 400px; margin: 0 auto"></div>
-						<div id="lineChartContainer" class="chart" style="min-width: 400px; height: 400px; margin: 0 auto"></div>
-					</div>
+				<br>
+				<div class="container-fluid">
+					<br/>
+					<br/>
+					<h2 align="middle"><label>Tourist Arrivals</label></h2>
+					<form class="form-inline" role="form">
+						<div class="form-group">
+							<label>Year:</label>
+							<select class="form-control" id="select-year">
+								<option value="2010">2010</option>
+								<option value="2011">2011</option>
+								<option value="2012">2012</option>
+								<option value="2013">2013</option>
+								<option value="2014">2014</option>
+								<option value="2015" selected>2015</option>
+							</select>
+						</div>
+					</form>
+					<br/>
+					<br/>
+					<div id="barChartContainer" class="chart" style="min-width: 400px; height: 400px; margin: 0 auto"></div>
+					<div id="lineChartContainer" class="chart" style="min-width: 400px; height: 400px; margin: 0 auto"></div>
 				</div>
 			</section>
 
 			<!-- page 4 -->
 			<section id="page4">
 				<div class="content">
-					<div class="container-fluid">
+					<div class="container-fluid" align="middle">
 						<div class="row">
 							<h2><label>Tourist Expenditures</label></h2>
 							<form class="form-inline" role="form">
@@ -214,8 +219,12 @@
 							<div id="radarChart" class="chart" style="display: inline-flex;"></div>
 							<div id="container" class="chart" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
 
-							<label>*Sightseeing, Entertainment & Gaming expenditure has been excluded from tourism receipts in the country breakdown due to commercial sensitivity of information.</label>
-							<label>**Other tourism components include expenditure on airfares on local transportation (2015), Singapore-based carriers, port taxes, business, medical, education and transit visitors (2013 - 2015).</label>
+							<p>
+								<label>Sightseeing, Entertainment & Gaming expenditure has been excluded from tourism receipts in the country breakdown due to commercial sensitivity of information.</label>
+							</p>
+							<p>
+									<label>Other tourism components include expenditure on airfares on local transportation (2015), Singapore-based carriers, port taxes, business, medical, education and transit visitors (2013 - 2015).</label>
+							</p>
 						</div>
 					</div>
 				</div>

@@ -1,6 +1,6 @@
 
 var width = window.innerWidth-50,
-	height = window.innerHeight-110;
+	height = window.innerHeight-100;
 
 var year = $("#geomap_year").val();
 // console.log(year);
@@ -95,12 +95,11 @@ function plotMap() {
 				
 				// map title
 				svg.append('text')
-					.text('Top 13 Visitors to Singapore')
+					.html('Top 13 Visitors to Singapore')
 					.attr('x', 20)
 					.attr('y', 500)
 					.style('z-index', 999)
-					.style('font-size', 30)
-					.style('text-decoration', 'underline');
+					.style('font-size', 36);
 		land.exit()
 			.remove();
 	});

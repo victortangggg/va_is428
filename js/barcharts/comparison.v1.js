@@ -1,5 +1,5 @@
 var countriesData = [],
-          yearData = [],
+          yearData_ = [],
           visitorArrivalData =[],
           visitorsDepartedData = [];
 
@@ -24,7 +24,7 @@ var countriesData = [],
         $(select_element).on("change", function() {
           select_element = $("#select-year");
           countriesData = [];
-          yearData = [];
+          yearData__ = [];
           visitorArrivalData =[];
           visitorsDepartedData = [];
           //dataByYear = data.filter(function(element) {return element.Year == d3.select('#select-year').node().value;});
@@ -56,13 +56,13 @@ var countriesData = [],
 
           dataByYear.map(function(d){ 
               countriesData.push(d.Country);
-              yearData.push(d.Year);
+              yearData_.push(d.Year);
               visitorArrivalData.push(d.VisitorArrival);
               visitorsDepartedData.push(d.VisitorDeparted);
           });
 
           console.log(countriesData);
-          console.log(yearData);
+          console.log(yearData_);
           console.log(visitorArrivalData);
           console.log(visitorsDepartedData);
 
@@ -77,6 +77,7 @@ var countriesData = [],
             title: {
                 text: null//'Proportion of Tourists Arriving to Singapore'
             },
+            exporting: { enabled: false },
             xAxis: {
                 categories: countriesData,
                 // lineWidth: 0,
@@ -169,13 +170,13 @@ var countriesData = [],
 
         dataByYear.map(function(d){ 
             countriesData.push(d.Country);
-            yearData.push(d.Year);
+            yearData_.push(d.Year);
             visitorArrivalData.push(d.VisitorArrival);
             visitorsDepartedData.push(d.VisitorDeparted);
         });
 
         // console.log(countriesData);
-        // console.log(yearData);
+        // console.log(yearData_);
         // console.log(visitorArrivalData);
         // console.log(visitorsDepartedData);
 
@@ -190,6 +191,7 @@ var countriesData = [],
           title: {
               text: null//'Proportion of Tourists Arriving to Singapore'
           },
+          exporting: { enabled: false },
           xAxis: {
               categories: countriesData,
               // lineWidth: 0,
@@ -291,12 +293,12 @@ var lineChartResults=[];
           });
 
         console.log(lineChartResults);
-        Highcharts.theme = {
-          colors: ['#FF067E', '#E406E8', '#AF07FF', '#5B06E8', '#2C1BFF', '#F314FF', 
-                   '#E80C83', '#FF0100', '#E8300C', '#FF5C0D', '#FF7A50', '#E8772B']
-        };
+        Highcharts.setOptions({
+          colors: ['#000000', '#50B432', '#ED561B', '#DDDF00', '#24CBE5', '#64E572', '#FF9655', '#FFF263', '#6AF9C4',
+                    '#FF067E', '#E406E8', '#AF07FF', '#5B06E8', '#2C1BFF', '#F314FF', '#294268']
+        });
 
-        Highcharts.setOptions(Highcharts.theme);
+        // Highcharts.setOptions(Highcharts.theme);
 
         Highcharts.chart('lineChartContainer', {
           credits: {
@@ -309,6 +311,7 @@ var lineChartResults=[];
           title: {
               text: null//'Overall Country Expenditure'
           },
+          exporting: { enabled: false },
           // subtitle: {
           //     text: 'Total Expenditure of Country (2013 - 2015)'
           //},
