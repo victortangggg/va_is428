@@ -148,7 +148,7 @@ $.fn.alignSections = function () {
     }
 }
 
-$(window).load(function () {
+$(window).on('load', function () {
 
     windowWidth = $(window).width();
 
