@@ -1,4 +1,4 @@
-alert('this application is best viewed in full screen');
+// alert('this application is best viewed in full screen');
 
 
 
@@ -8,6 +8,9 @@ alert('this application is best viewed in full screen');
 
 
 var lineChartResults = [];
+
+var chartWidth = 475,
+    chartHeight = 210; 
 
 var chart;
 
@@ -384,9 +387,9 @@ svg.on('mousemove', function () {
         .attr('cy', d3.mouse(this)[1]);
 });
 
-$('#select-year').change(function () {
+$('#select-year').on('change', function () {
     select_year = $('#select-year').val();
-
+    
     land.remove();
     labels.remove();
     arcs.remove();
@@ -498,9 +501,6 @@ var dateFormat = d3.timeFormat("%Y");
 //     console.log(d3.merge([big_data_1, big_data_2]));
 // }
 // console.log(d3.select('#select-year').node().value);
-
-var chartWidth = 475,
-    chartHeight = 210;
 
 d3.csv("data/comb_visitor_arrivals_vs_departed.csv", function (error, data) {
     select_element = $("#select-year");
