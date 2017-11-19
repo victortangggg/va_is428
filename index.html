@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+
+    <title>SMU IS428 - Team VEJ</title>
+    <link rel='icon' type='image/png' sizes='16x16' href='img/favicon-16x16.png'>
+
+    
+	<!-- Bootstrap and Font Awesome css-->
+	<!-- we use cdn but you can also include local files located in css directory-->
+	<link rel='stylesheet' href='http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css'>
+	<link rel='stylesheet' href='bower_components/bootstrap/dist/css/bootstrap.min.css'>
+
+	<!-- Google fonts - Montserrat for headings, Cardo for copy-->
+	<link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Montserrat:400,700|Cardo:400,400italic,700'>
+	<link rel='stylesheet' href='css/onepage-scroll.css'>
+	<link rel='stylesheet' href='css/style.default.css' id='theme-stylesheet'>
+
+	<link rel='stylesheet' type='text/css' href='css/geomap/geomap.v2.css'>
+
+    <link rel='stylesheet' type='text/css' href='css/style.css'>
+
+	<!-- Javascript files-->
+	<script type='text/javascript' src='bower_components/jquery/dist/jquery.min.js'></script>
+	<script type='text/javascript' src='bower_components/bootstrap/dist/js/bootstrap.min.js'></script>
+	<script type='text/javascript' src='js/jquery.onepage-scroll.js'></script>
+	<script type='text/javascript' src='js/front.js'></script>
+
+	<script type='text/javascript' src='bower_components/d3/d3.min.js'></script>
+
+	<!-- geomap -->
+	<script type='text/javascript' src='js/geomap/fisheye.js'></script>
+	<script type='text/javascript' src='bower_components/d3-tip/index.js'></script>
+
+	<!-- browse by all countries -->
+	<script type='text/javascript' src='bower_components/highcharts/highcharts.js'></script>
+	<script type='text/javascript' src='bower_components/highcharts/modules/exporting.js'></script>
+
+	<!-- radar chart -->
+	<script src='https://d3js.org/d3-path.v1.min.js' charset='utf-8'></script>
+	<script src='js/radarchart/radar-chart.js' charset='utf-8'></script>
+
+    <body>
+		<div class='wrapper'>
+			<div class='main'>
+
+				<!-- page 1 -->
+				<section id='page1'>
+					<div class='content'>
+						<div class='container-fluid'>
+							<video autoplay loop id='video-background' muted plays-inline>
+								<source src='video/singapore.mp4' type='video/mp4'>
+							</video>
+							<div id='overlay-text'>
+								<h3>Project Objectives:</h3>
+								<p>Understand which countries are sending the most tourists to Singapore</p>
+								<p>Analyse the proportion of tourists coming to Singapore against the total outbound residents of the country</p>
+								<p>Compare the expenditure and income patterns of these tourists</p>
+								<p>Drill-down on the exact expenditure items</p>
+							</div>
+						</div>	
+					</div>
+				</section>
+
+				<!-- page 2 -->
+				<section id='page2'>
+					<div class='container-fluid'>
+						<div class='row'>
+							<div id='geomap'></div>
+						</div>
+						<div class='row'>
+							<div class='col-md-1'>
+								<div class='form-group'>
+									<label>Year: </label>
+									<select class='form-control' id="select-year">
+										<option value='2015' selected>2015</option>
+										<option value='2014'>2014</option>
+										<option value='2013'>2013</option>
+										<option value='2012'>2012</option>
+										<option value='2011'>2011</option>
+										<option value='2010'>2010</option>
+									</select>
+								</div>
+							</div>
+							<div class='col-md-5'>
+								<div class='container'>
+									<div id='geomap_barchart'></div>
+								</div>
+							</div>
+							<div class='col-md-6'>
+								<div class='container'>
+									<div id='geomap_linechart'></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<!-- page 3 -->
+				<section id="page3">
+					<div class="content">
+						<div class="container-fluid" align="middle">
+							<div class="row">
+								<h2><label>Tourist Expenditures</label></h2>
+								<form class="form-inline" role="form">
+									<div class="form-group">
+										<label>Country:</label>
+										<select class="form-control" id="dropDownCountry">
+											<optgroup label="Asia-Pacific">
+												<option value="Australia">Australia</option>
+												<option value="China">China</option>
+												<option value="Hong Kong">Hong Kong</option>
+												<option value="India">India</option>
+												<option value="Indonesia" selected>Indonesia</option>
+												<option value="Japan">Japan</option>
+												<option value="Malaysia">Malaysia</option>
+												<option value="Philippines">Philippines</option>
+												<option value="South Korea">South Korea</option>
+												<option value="Taiwan">Taiwan</option>
+												<option value="Thailand">Thailand</option>
+											</optgroup>
+											<optgroup label="Europe">
+												<option value="Germany">Germany</option>
+												<option value="UK">United Kingdom</option>
+											</optgroup>
+											<optgroup label="US">
+												<option value="USA">United States</option>
+											</optgroup>
+										</select>
+										<label>Year:</label>
+										<!--           <button type="button" class="btn btn-default" id="yearbtn-2013" value="2013">2013</button>
+										<button type="button" class="btn btn-default" id="yearbtn-2014" value="2014">2014</button>
+										<button type="button" class="btn btn-default" id="yearbtn-2015" value="2015">2015</button>
+										-->
+										<div class="btn-group" data-toggle="buttons">
+											<label class="btn btn-default" >
+												<input type="radio" name="options" id="yearbtn-2013" value="2013">2013
+											</label>
+											<label class="btn btn-default">
+												<input type="radio" name="options" id="yearbtn-2014" value="2014">2014
+											</label>
+											<label class="btn btn-default">
+												<input type="radio" name="options" id="yearbtn-2015" value="2015" checked>2015
+											</label>
+										</div>
+									</div>
+								</form>
+	
+								<div id="radarChart" class="chart" style="display: inline-flex;"></div>
+								<div id="container" class="chart" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+	
+								<!-- <p>
+									<label>Sightseeing, Entertainment & Gaming expenditure has been excluded from tourism receipts in the country breakdown due to commercial sensitivity of information.</label>
+								</p>
+								<p>
+									<label>Other tourism components include expenditure on airfares on local transportation (2015), Singapore-based carriers, port taxes, business, medical, education and transit visitors (2013 - 2015).</label>
+								</p> -->
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<!-- page 4-->
+				<section id="page4">
+					<div class="content">
+						<div class="container-fluid">
+							<div class="row">
+								<video autoplay loop id="video-background" muted plays-inline>
+									<source src="video/ending.mp4" type="video/mp4">
+								</video>
+							</div>
+							<div id="overlay-text">
+								<h3>Project Conclusion:</h3>
+								<p>
+									Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+									Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+									Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+									Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+								</p>
+								<p>
+									Check out more information about this project at our Wiki page at <a href='https://wiki.smu.edu.sg/1718t1is428g1/1718t1is428T10'>Team VEJ</a>
+								</p>
+							</div>
+						</div>
+					</div>
+				</section>
+			</div>
+		</div>
+    </body>
+
+	<script type='text/javascript' src='index.js'></script>
+	<script type="text/javascript" src='js/radarchart/radarchart.v1.js'></script>
+
+</html>

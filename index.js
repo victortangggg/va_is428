@@ -215,12 +215,13 @@ $(document).ready(function () {
                 });
 
             // map title
-            svg.append('text')
-                .html('Top 13 Visitors to Singapore')
-                .attr('x', 20)
-                .attr('y', 400)
-                .style('z-index', 999)
-                .style('font-size', 36);
+            // svg.append('text')
+            //     .html('Top 13 Visitors to Singapore')
+            //     .attr('x', 20)
+            //     .attr('y', 400)
+            //     .style('z-index', 999)
+            //     .style('font-size', 36);
+
             land.exit()
                 .remove();
         });
