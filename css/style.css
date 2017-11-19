@@ -30,10 +30,9 @@ video {
     background: rgba(0,0,0,0.6);
     color: white;
     padding: 2rem;
-    width: 80%;
-    margin:2rem;
-    float: right;
-    font-size: 1.3rem;
+    width: 75%;
+    margin: 0 auto;
+    float: center;
 }
 
 .legend {
