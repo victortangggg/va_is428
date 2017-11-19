@@ -43,3 +43,7 @@ video {
 .chart {
     display: inline-block;
 }
+
+.endNote {
+    font-size: 12.5px;
+}
