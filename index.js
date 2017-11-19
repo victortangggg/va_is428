@@ -236,8 +236,8 @@ var tooltip = d3.tip()
     .attr('class', 'd3-tip')
     .html(function (d) {
         // console.log(d);
-        let visitorArrival = d['Y' + year];
-        let departure = d['O' + year];
+        let visitorArrival = d['Y' + select_year];
+        let departure = d['O' + select_year];
         let percentage = (parseFloat(visitorArrival) / departure * 100).toFixed(2);
 
         // console.log(d);
