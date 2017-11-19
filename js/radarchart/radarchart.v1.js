@@ -130,7 +130,9 @@ var data = d3.csv("data/annual_tourism_receipts_by_country_and_major_components.
         newObj.axes.push({ axis: "Accommodation", value: +d.Accommodation });
         newObj.axes.push({ axis: "Food And Beverage", value: +d.FoodAndBeverage });
         newObj.axes.push({ axis: "Shopping", value: +d.Shopping });
-        newObj.axes.push({ axis: "Local Transport", value: +d.LocalTransport });
+        if(btnYearValue != 2015){
+          newObj.axes.push({ axis: "Local Transport", value: +d.LocalTransport });
+        }
         // newObj.axes.push({ axis: "Medical", value: +d.Medical });
         newObj.axes.push({ axis: "Others", value: +d.Others });
         results.push(newObj);
