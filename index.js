@@ -119,7 +119,7 @@ d3.csv("data/comb_visitor_arrivals_vs_departed.csv", function (error, data) {
 var width = window.innerWidth - 50,
     height = window.innerHeight - 210;
 
-var year = $("#select-year").val();
+var select_year = $("#select-year").val();
 // console.log(year);
 
 var div = d3.select('#geomap'),
@@ -385,7 +385,7 @@ svg.on('mousemove', function () {
 });
 
 $('#select-year').change(function () {
-    year = $('#select-year').val();
+    select_year = $('#select-year').val();
 
     land.remove();
     labels.remove();
