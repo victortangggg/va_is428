@@ -363,7 +363,7 @@ $(document).ready(function () {
     // draw magnifying lens
     var lens = svg.append('circle')
         .attr('class', 'lens')
-        .attr('r', fisheye.radius() * 3.85);
+        .attr('r', fisheye.radius() * 3);
 
     // fisheye zoom
     svg.on('mousemove', function () {
