@@ -61,7 +61,7 @@ $(document).ready(function () {
             },
             chart: {
                 type: 'line',
-                width: 600,
+                width: chartWidth,
                 height: chartHeight
             },
             title: {
