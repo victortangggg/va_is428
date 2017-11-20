@@ -10,7 +10,7 @@ $(document).ready(function () {
 
     var lineChartResults = [];
 
-    var chartWidth = 475,
+    var chartWidth = (window.innerWidth) / 2,
         chartHeight = 210;
 
     var chart;
